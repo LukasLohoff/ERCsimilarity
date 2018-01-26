@@ -1,0 +1,535 @@
+        Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016
+        www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/
+        doi:10.5194/ascmo-2-105-2016
+        ©Author(s) 2016. CC Attribution 3.0 License.
+              Aspace–timestatistical climate model for hurricane
+                    intensiﬁcation in the North Atlantic basin
+                          Erik Fraza, James B. Elsner, and Thomas H. Jagger
+              Department of Geography, Florida State University, 113 Collegiate Way, Tallahassee, FL 32306, USA
+                           Correspondence to: Erik Fraza (ef10c@my.fsu.edu)
+                Received: 4 November 2015 – Revised: 20 June 2016 – Accepted: 8 July 2016 – Published: 2 August 2016
+            Abstract. Climate inﬂuences on hurricane intensiﬁcation are investigated by averaging hourly intensiﬁcation
+                               ◦ ◦
+            rates over the period 1975–2014 in 8 ×8 latitude–longitude grid cells. The statistical effects of hurricane inten-
+            sity and sea-surface temperature (SST), along with the climatic effects of El Niño–Southern Oscillation (ENSO),
+            the North Atlantic Oscillation (NAO) and the Madden–Julian Oscillation (MJO), are quantiﬁed using a Bayesian
+            hierarchical model ﬁt to the averaged data. As expected, stronger hurricanes tend to have higher intensiﬁcation
+            rates, especially over the warmest waters. Of the three climate variables considered, the NAO has the largest
+            effect on intensiﬁcation rates after controlling for intensity and SST. The model shows an average increase in in-
+                                 −1 −1
+            tensiﬁcation rates of 0.18 [0.06, 0.31]msh(95%credible interval) for every 1 standard deviation decrease
+            in the NAO index. Weak trade winds associated with the negative phase of the NAO might result in less vertical
+            windshear and thus higher mean intensiﬁcation rates.
+        1 Introduction                      Aggregate cases of RI have been studied from a climate
+                                          perspective. In particular, Klotzbach (2012) ﬁnds the num-
+        Hurricanes are powerful warm-core cyclones that are someber of RI cases in the North Atlantic is about 3 times as high
+        of the most destructive natural hazards on the planet (NHC,during La Niña than during El Niño with the difference be-
+        2013; Peduzzi et al., 2012; Pielke Jr. et al., 2008). Hurricaneing even larger when cases are restricted to hurricanes in the
+        intensity is estimated by the highest sustained near-surfacemain development region (MDR). According to Klotzbach
+        wind speed within the storm. While the skill of predicting(2012) the large-scale mode of tropical variability known as
+        hurricane tracks has improved over the past 20 to 30 years,the Madden–Julian Oscillation (MJO, Madden and Julian,
+        skill in predicting intensity has lagged considerably behind1972) might also play a role. Klotzbach (2012) found two-
+        (e.g., Elsberry et al., 2007, 2013). Speciﬁcally, predicting in-thirds of all RI cases occur in just three of the eight MJO
+        tensity change is difﬁcult with present-day numerical mod-phases.
+        els owing to unresolved small-scale processes including non-Much less work has been done to understand intensiﬁ-
+        hydrostatic thermodynamics.       cation spatially. Fraza and Elsner (2015) ﬁnd a signiﬁcant
+         Hurricane intensiﬁcation (increasing intensity change) isrelationship between proximate SST and mean intensiﬁca-
+        a well-studied problem in meteorology with particular focustion. They divide the North Atlantic basin into 4◦ latitude–
+        onrapid intensiﬁcation (RI). RI is deﬁned as a large increaselongitude cells and use mean intensiﬁcation (increasing in-
+                     −1
+        in intensity (e.g., 15msor 30kt) over a limited periodtensity) as the response variable in a generalized linear re-
+        of time (e.g., 24h) (see Kaplan and DeMaria, 2003). Op-gression model with a term for the spatial autocorrelation.
+        erationally the probability of RI for a particular hurricaneThe covariates in the model include intensity and SST. Val-
+        is assessed using sea-surface temperature (SST) or oceanues within the cells are averaged over the entire period of
+        heat content (OHC), along with other factors, in a regres-record. By statistically controlling for intensity, the effect of
+        sion model (e.g., DeMaria et al., 1993; Kaplan and DeMaria,SSTonintensiﬁcation is clearly demonstrated.
+        2003; Law and Hobgood, 2007).
+        Published by Copernicus Publications.
+          106                                        E. Fraza et al.: Statistical model for hurricane intensiﬁcation
+            The ﬁnding contrasts with results from an earlier study2.1.3Climate variables
+          (Balling and Cerveny, 2006) that used current and precedingThe climate variables used in this study are ENSO, NAO,
+          month’s SST in a bivariate correlation analysis.and MJO. We use the Multivariate ENSO Index (MEI) to
+            The present work builds on Fraza and Elsner (2015) byrepresent ENSO in our model. The MEI is considered more
+          adding climate factors, like El Niño–Southern Oscillationcomprehensive than other common ENSO indices such as
+          (ENSO), to the model. The climate factors vary with timeNiño 3.4 because the MEI is based on more factors than just
+          so the spatial model is extended to include a time-varyingan SST index (Klotzbach and Oliver, 2015). The MEI in-
+          component. The purpose of this article is to demonstrate thecludes six observed variables: sea-level pressure, zonal and
+          space–time model and to determine the effect of the climatemeridional components of the surface wind, surface air and
+          factors on hurricane intensiﬁcation controlling for intensitysea-surface temperatures, and total cloudiness fraction of the
+          and SST.                                     sky.
+            The paper is outlined as follows. In Sect. 2 we describeWeuse the NAO Index (NAOI) from the Climate Predic-
+          the data that will be used in the model, including the HUR-tion Center (CPC) of NOAA to represent NAO in our model.
+          DAT2 dataset, climate data, and spatial aggregation of theThe index is deﬁned by projecting the 00:00UTC 500mb
+          data. In Sect. 3 we explore the spatial distribution of intensi-height anomalies for the Northern Hemisphere onto the load-
+          ﬁcation, intensity, and SST. In Sect. 4 we present the space–ing pattern of the NAO (Wallace and Gutzler, 1981). This
+          time statistical model and discuss its components. In Sect. 5creates a daily NAOI, which is then converted to a monthly
+          we present the results from ﬁtting the model to the data. Inaverage.
+          Sect. 6 we explore the relationship between intensiﬁcationWeusetheMJOindex(MJOI)fromWheelerandHendon
+          and the North Atlantic Oscillation (NAO). In Sect. 7 we dis-(2004) to represent MJO in our model. The index is deﬁned
+          cuss our ﬁndings, and in Sect. 8 we provide a summary ofby extracting the ﬁrst two empirical orthogonal functions of
+          the paper.                                   the combination of the combined ﬁelds including 200 and
+          2 Data                                       850mbzonalwindﬁelds,alongwithoutgoinglong-wavera-
+                                                       diation. The annual mean and ENSO-type variability were
+          2.1 Sources and description                  then removed. Finally, the time series is normalized to have
+                                                       a standard deviation of 1 over the time period 1979–2001.
+          2.1.1Hurricane tracks
+          The hurricane data used in this study are derived from the2.2Filtering, interpolation, and aggregation
+          HURDAT2 (Jarvinen et al., 1984). HURDAT2 is a dataset2.2.1Interpolation of hurricane track data
+          compiled by the National Hurricane Center (NHC) of the
+          NationalOceanicandAtmosphericAdministration(NOAA).The6hintervals in HURDAT2 are too coarse for our spatial
+          Thedataset includes information such as storm center ﬁx (ininterpolation. A storm with a forward speed of 10ms−1 will
+          tenths of degrees), storm intensity, and if the storm centertravel 216km in 6h. A storm could pass through a corner of
+          is over land. Storm intensity is measured as the 1min near-a cell and not get counted in that time. Therefore, we inter-
+          surface wind speed (∼10m). The wind speed is providedpolate the hurricane track data to 1h intervals using a spline
+                            −1                         technique. This determines the storm center ﬁx using spher-
+          in knots (1kt=0.5144ms). Values of these variables areical geometry. Further, the spline interpolation preserves the
+          given every 6h (00:00, 06:00, 12:00, 18:00UTC). We use
+          data from the 1975–2014 hurricane seasons. The dataset was6hdata.Thisisdonebyusingapiecewisepolynomialtode-
+          downloaded from www.nhc.noaa.gov/pastall.shtml#hurdat.terminethevaluesbetweenthepreserved6hdata.Additional
+                                                       details concerning the interpolation process can be found in
+          2.1.2Sea-surface temperatures                Elsner and Jagger (2013).
+                                                        The intensity change of the storm is computed as the ﬁrst
+          The SST data used in this study are from the NOAAderivative of the intensity using a Savitzky–Golay smoothing
+          Extended Reconstructed Sea Surface Temperature V3b.ﬁlter and a weighted differencing scheme (Elsner and Jagger,
+          The dataset is originally from the International Com-2013). This technique keeps the minimum and maximum in-
+          prehensive Ocean-Atmosphere Data Set (ICOADS). Sta-tensities of a storm. This limits the size of the computational
+          tistical methods were used to ﬁll in missing data. Theerrors relative to a simple ﬁnite-difference scheme.
+                       ◦  ◦
+          dataset is on a 2 ×2 global oceanic grid. The dataset
+          was downloaded from http://www.esrl.noaa.gov/psd/data/2.2.2Spatial aggregation of tracks and SST data
+          gridded/data.noaa.ersst.html#detail.
+                                                       As a compromise between having enough cells and enough
+                                                       datawithineachcell,wechoosean8◦ latitude–longitudegrid
+                                                       for the area 10–50◦ N by 20–100◦ W. This is done using the
+                                                       raster package in the R programming language (Hijmans,
+          Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/
+              E. Fraza et al.: Statistical model for hurricane intensiﬁcation                                                          107
+                                                                                                   (a)
+                    40° N                                                                      150
+                                                                                              s
+                                                                                              l
+                                                                                              l
+                                                                                               ce
+                                                                                              d
+                    30° N                                                                     i100
+                                          Gustav                                               gr
+                                                                                              f
+                                                                                               o
+                                                                                              r
+                    20° N                                                                     e
+                                                  Ike                                         b 50
+                                Omar                                                          m
+                                                                                              u
+                                                                                              N
+                                  80° W      60° W      40°  W                                   0
+                                                                                                     0.0  0.5 1.0  1.5  2.0
+              Figure1.Tracksandcorrespondingcellsforthree2008hurricanes:                                               −1
+              Gustav,Ike,andOmar.Eachcoloredcellindicatesatleastonestorm                         Mean intensification [m s  per h]
+              intensiﬁes within its boundaries.
+                                                                                            (b)
+                       (a)
+                                                                                            0.0     0.2     0.4     0.6     0.8
+                                                                                                                  −1
+                                                                                                 Intensification [m s  per h]
+                       0     5    10    15    20    25   30    35              Figure 3. Mean intensiﬁcation histogram and spatial plot. (a) His-
+                            Number of intensifying hurricanes per cell                                                     −1 −1
+                       (b)                                                     togram of mean hourly intensiﬁcation in 0.2ms  h    intervals,
+                                                                               and (b) spatial distribution of mean intensiﬁcation. The data are for
+                                                                               the months June–October over the period 1975–2014.
+                                                                               year. AnnualreferstothehurricaneseasonmonthsfromJune
+                                                                               through October. The grid creates a total of S = 50 cells per
+                                                                               year. However, nine cells within the grid do not have a hurri-
+                                                                               cane intensify within its boundaries during our time of inter-
+                                                                               est. These nine cells are therefore removed, leaving S = 41
+                                                                               cells per year.
+                       0.2       0.4       0.6       0.8       1.0
+                         Ratio of intensifying hurricanes to all hurricanes    2.2.3   Time ﬁltering of the climate indexes
+              Figure 2. Hurricane intensiﬁcation count and ratio per cell.     Weaverage the monthly MEI values from June through Oc-
+              (a) Number of intensifying hurricanes per cell, and (b) ratio of to-tober to get a yearly value and average the monthly NAOI
+              tal number of hurricanes with at least 1h of intensiﬁcation to totalvalues from January through March to get a yearly value. We
+              number of hurricanes per cell. The data are from the period 1975–also sum the ﬁrst two principal components of the monthly
+              2014.                                                            MJOI from June through October and average the values to
+                                                                               get a yearly value.
+              2014). An example of our raster grid is shown in Fig. 1. The
+              tracks of three storms from the 2008 Atlantic hurricane sea-     3 Exploratory analysis
+              sonareplotted (Gustav, Ike, and Omar). The tracks represent
+              the paths of each storm when they were at hurricane inten-       Hurricane intensiﬁcation is most common over the west-
+              sity. Only cells that have at least one center ﬁx of a hurricane ern North Atlantic (Fig. 2). This is also where hurricanes
+              intensifyingarecolored.Annualmeanintensityandintensiﬁ-           are most frequent. The Gulf of Mexico and northwestern
+              cation values are computed for each cell using all center ﬁxes   Caribbean Sea are also regions where intensiﬁcation is rela-
+              within the cell. The mean intensity and intensiﬁcation val-      tively morecommon.Fewercasesofintensiﬁcationarenoted
+              ues are calculated per cell per storm, then averaged for each    in the southern Caribbean and eastern portions of the basin.
+              www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/                Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016
+                108                                                                     E. Fraza et al.: Statistical model for hurricane intensiﬁcation
+                       1975         1976        1977         1978         1979                   1975         1976        1977         1978         1979
+                       1980         1981        1982         1983         1984                   1980         1981        1982         1983         1984
+                       1985         1986        1987         1988         1989                   1985         1986        1987         1988         1989
+                       1990         1991        1992         1993         1994                   1990         1991        1992         1993         1994
+                       1995         1996        1997         1998         1999                   1995         1996        1997         1998         1999
+                       2000         2001        2002         2003         2004                   2000         2001        2002         2003         2004
+                       2005         2006        2007         2008         2009                   2005         2006        2007         2008         2009
+                       2010         2011        2012         2013         2014                   2010         2011        2012         2013         2014
+                 0.00    0.25    0.50    0.75    1.00    1.25    1.50    1.75    2.00
+                                       Intensification [m s−1 per h]                       30         39         48         57         66        75         84
+                                                                                                                                 −1
+                                                                                                                      Intensity [m s ]
+                Figure 4. Yearly mean intensiﬁcation rates for intensifying hur-          Figure 5. Yearly mean intensity for intensifying hurricanes. Mean
+                ricanes. Mean intensiﬁcation is calculated over the period June–          intensity is calculated over the period June–October for each year
+                October for each year 1975–2014.                                          1975–2014.
+                   The ratio of intensifying hurricanes to all hurricanes is              had27cellswithanintensifyinghurricane,followedby1995
+                highest in the central and eastern MDR. The ratio is lower                (25 cells) and 2010 (23 cells). The highest mean intensiﬁ-
+                in most of the Caribbean Sea, as well as the Gulf of Mexico.                                       −1 −1
+                The ratio is also lower moving north in the basin. The ratios             cation rate is 1.83ms        h    in 1987. The next highest rate
+                                                                                                      −1 −1
+                range from 0.2 in the far north of the basin to 1 in the far              is 1.37ms       h    in 1978. Other years with mean intensiﬁ-
+                south and east of the basin.                                              cation rates over 1.25ms−1h−1 include 1991, 1992, 2000,
+                                                                                          2001, and 2008.
+                3.1    Intensiﬁcation                                                     3.2    Intensity
+                A histogram of basin-wide mean intensiﬁcation appears to                  From year to year, the highest mean intensities are found in
+                showagammadistribution (Fig. 3). Intensiﬁcation is binned                 the southern and central portions of the basin (Fig. 5). The
+                           −1 −1                                                                                              −1
+                at 0.2ms       h    intervals starting from no intensiﬁcation.            highest mean intensity is 77ms          in 1980. Other years with
+                The largest bins are found closest to zero and decrease                   meanintensities over 70ms−1 include 1979 and 2007.
+                moving away from zero. Overall, a total 10312 cells in-
+                tensify from 232 storms over the time frame. The mean                     3.3    Sea-surface temperature
+                                                   −1 −1
+                intensiﬁcation rate is 0.43ms         h    . The median value is
+                           −1 −1
+                0.375ms       h     with ﬁrst and third quartiles of 0.140 and            From year to year, there are no great changes in sea-surface
+                           −1 −1
+                0.613ms       h    respectively. This equates to 20.1 [6.5, 28.6]         temperature anomalies (Fig. 6). A majority of the negative
+                           −1
+                knotsday      .                                                           SST anomalies are found in the early half of the time pe-
+                   From year to year, the highest mean intensiﬁcation rates               riod, and a majority of the positive SST anomalies are found
+                are found in the southern portion of the basin (Fig. 4). There            in the latter half of the time period. All cells with a mean
+                is a wide range in the number of cells that have an inten-                SST<20◦Care shown without an SST as these waters are
+                sifying hurricane each year. For instance, only two cells had             of less interest.
+                anintensifying hurricane in 1994. At the other extreme, 1998
+                Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016                        www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/
+              E. Fraza et al.: Statistical model for hurricane intensiﬁcation                                                           109
+                    1975       1976        1977       1978       1979                      (a)
+                                                                                        2.0
+                    1980       1981        1982       1983       1984                 .d.] 1.0
+                                                                                      MEI [s 0.0
+                    1985       1986        1987       1988       1989                  −1.0
+                                                                                                1980      1990      2000      2010
+                    1990       1991        1992       1993       1994
+                                                                                           (b)
+                    1995       1996        1997       1998       1999                   1.0
+                                                                                      .d.]
+                                                                                      OI [s 0.0
+                    2000       2001        2002       2003       2004                 NA
+                                                                                       −1.0
+                    2005       2006        2007       2008       2009                           1980      1990      2000      2010
+                                                                                        0.8 (d)
+                    2010       2011        2012       2013       2014
+                                                                                      .d.] 0.4
+                                                                                        0.0
+                                                                                      MJOI [s
+               −1.5     −1.0      −0.5      0.0      0.5      1.0       1.5            −0.4
+                              Sea surface temperature anomalies [°C]
+                                                                                                1980      1990 Year 2000      2010
+              Figure6.YearlymeanSSTanomalies.MeanSSTvaluesarecalcu-
+              lated over the period June–Octoberforeachyear1975–2014.Yearly    Figure 7. Time series of (a) monthly average of MEI from 1975
+              meanSSTs<20◦Careomittedfrombeingplotted.                         to 2014, (b) monthly average of NAOI from 1975 to 2014, and
+                                                                               (c) monthly average of MJOI from 1975 to 2014. Due to missing
+              3.4   Temporal factors                                           outgoing long-wave radiation data, 1979 is missing from the MJOI.
+              The temporal evolution of the MEI shows the strongest El         the marginal contributions of each of the climate effects on
+              Niño and La Niña events (Fig. 7). Standard deviation val-        intensiﬁcation as well as spatial autocorrelation in intensiﬁ-
+              ues above 0.75 indicate an El Niño event, and values below       cation values.
+              −0.75indicate a La Niña event. The extreme years of 1982–           The mean intensiﬁcation in each space–time cell is de-
+              1983 and 1997–1998 saw MEI values exceed 1.5 standard            scribed by a gamma random variable:
+              deviations (SD).
+                 The temporal evolution of the NAOI varies year to year,       X |α ,θ ∼indgamma(α ,θ );α >0, θ >0,                      (1)
+              but there is no long-term trend. The extreme years of 1989         s,t s,t s,t                s,t s,t  s,t      s,t
+              and 1995 saw NAOI values exceed 1 SD. The temporal evo-          which represents hurricane intensiﬁcation for each cell for
+              lution of the MJOI varies from year to year but also shows       each year from 1975 through 2014. The mean of X       is rep-
+              nolong-termtrend.Theextremeyearsof1999and2010saw                                                                     s,t
+                                                                               resented by µ    =α /θ ,whichare the shape and rate pa-
+              MJOI values below −0.4SD. Due to incomplete outgoing                           s,t    s,t s,t
+              long-wave radiation observations, 1978 is missing from the       rameters.Normallyintheliterature,β isusedtorepresentthe
+              MJOI.                                                            rate parameter in the gamma distribution. However, to avoid
+                                                                               confusion later with the covariates, θ is used to represent the
+                                                                               rate parameter in the gamma distribution.
+              4 Space–timemodel
+              We are interested in the relationship between hurricane in-
+              tensiﬁcation and factors that affect it on the climate scale.
+              Our approach is similar to the approach used in Hodges
+              et al. (2014), who examinedfactorsinﬂuencinghurricanefre-
+              quency. We use a full probability model that can account for
+              www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/                 Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016
+              110                                                           E. Fraza et al.: Statistical model for hurricane intensiﬁcation
+                               (a)                                                          (a)
+                            60
+                            40
+                            Density20
+                             0
+                             −0.050−0.025 0.000 0.025 0.050
+                                           −1 −1     −1
+                                    βInt [m sh  per m s ]
+                               (b)                                                         0.000      0.006      0.012
+                            20                                                                          −1 −1             −1
+                                                                                          β (s) [m s h  per m s ]
+                                                                                            Int
+                            Density10                                                       (b)
+                             0
+                                     0.0      0.1       0.2
+                                            −1 −1
+                                     βSST [m s h  per °C]
+              Figure 8. Posterior densities, with all other β terms held constant.
+              (a) Modeled density of mean intensiﬁcation changes per 1ms−1
+              increase in mean intensity. (b) Modeled density of mean intensiﬁca-
+              tion changes per 1◦C increase in mean SST. The red line represents
+              the x = 0 line (i.e., no effect). The gray lines represent the 95% CI.       0.0770.0790.0810.0830.085
+                                                                                           βSST(s) [m s−1h−1 per °C ]
+                Thelogofthemeanismodeledasalinearcombinationof
+              the predictors                                                  Figure 9. Mean of the posterior densities represented spatially.
+                                                                                                                  −1
+              log(µ )=β (s)·Int +β          (s)·SST                   (2)     (a) Mean intensiﬁcation rate per 1ms    increase in intensity.
+                    s,t   Int      s,t   SST         s,t                      (b) Mean intensiﬁcation rate per 1◦C increase in SST.
+                         +β       · ENSO +β        · NAO
+                             ENSO         t   NAO        t
+                         +β      · MJO +u ,
+                             MJO       t    s
+                                                                              et al., 2013). Unless otherwise stated, the default options
+              whereInt   andSST aretheactualintensityandSSTvalues             within the inla package are used.
+                       s,t        s,t
+              that vary by cell and time. us is a spatially dependent Gaus-     Temporal dependence is very unlikely to be an issue in
+              sian Markov random ﬁeld model (Besag, 1975) such that           our model. Given the yearly nature of the measurements, any
+                                                    !                         temporal dependence is very likely to be over a short amount
+              u |u ,i 6= j,τ ∼ Gau    1 Xu , 1 τ ,                    (3)     of time and averaged into the yearly climate data.
+               i  j                  m       j  m
+                                       i i∼j     i
+                                                                              5 Results
+              where mi is the number of neighboring cells of location i,
+              and i ∼ j indicates that i and j are neighbors. The β param-    Results are presented in the form of posterior densities for
+              eters have a log-gamma prior distribution.                      the model coefﬁcients. First the intensity and SST model co-
+                The spatially varying β parameters are assumed to be          efﬁcients are investigated (Fig. 8). The model results conﬁrm
+              the sum of structured and unstructured random effects. The      the signiﬁcant positive relationship between intensity and in-
+              structured effects are described by a Markov random ﬁeld        tensiﬁcation shown in Fraza and Elsner (2014). Regions with
+              model(Besag,1975)andtheunstructuredeffects by a multi-          stronger hurricanes tend to have higher intensiﬁcation rates.
+              variate normal distribution. Additional information concern-    Onaverage across the basin and for this spatial scale for ev-
+                                                                                      −1
+              ing the model is available in Hodges et al. (2014), including   ery1ms     increaseinintensity,intensiﬁcationratesincrease
+                                                                                           −1 −1
+              Eqs. (1)–(5). Speciﬁcs about these types of space–time mod-     by 0.0083ms     h    [−0.0025, 0.019] (95% credible inter-
+              els are available in Cressie and Wikle (2011), especially in    val (CI)).
+              chap. 7.                                                          Themodelalsoconﬁrmsasigniﬁcantpositiverelationship
+                The model is ﬁt using the method of integrated nested         between local SST and intensiﬁcation as shown in Fraza and
+              Laplace approximation (INLA). INLA is a deterministic           Elsner (2015). Warmer ocean regions tend to be those that
+              technique for Bayesian inference (Blangiardo and Cameletti,     support higher intensiﬁcation rates. On average across the
+              2015) and is available in the inla package for R (Martins       basin and on this spatial scale for every 1◦C warming, in-
+              Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016             www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/
+            E. Fraza et al.: Statistical model for hurricane intensiﬁcation                                         111
+                       (a)                                          Table 1. DIC values for each iteration of the model runs. Intensity
+                      6                                             and SST are included in all iterations.
+                      4
+                     Density2                                                      Climate covariates DIC
+                      0                                                            NAOIonly        −70.42
+                      −0.6   −0.3     0.0     0.3    0.6
+                                     −1 −1                                         MEIonly         −63.42
+                             β    [m s h  per 1 SD]
+                              MEI                                                  MJOIonly        −64.03
+                       (b)                                                         NAOI&MEI        −68.89
+                      6                                                            NAOI&MJOI       −70.16
+                      4                                                            MEI&MJOI        −66.75
+                     Density2
+                      0       −0.5        0.0         0.5
+                                     −1 −1                          MEIcoefﬁcient (Fig. 10) is centered near zero with a mean
+                             βNAOI [m s h  per 1 SD]                            −1 −1
+                                                                    of 0.0099ms   h    per 1 SD [−0.100, 0.120] (95% CI)
+                         (c)                                        (0.46ktday−1) indicating ENSO does not have a signiﬁcant
+                      2.0                                           effect on mean intensiﬁcation rates at these spatial and tem-
+                      1.5                                           poral scales.
+                      1.0                                             The MJOI is used as an index for the MJO. The posterior
+                     Density0.5                                     density on the MJOI coefﬁcient (Fig. 10) is shifted to the
+                      0.0     −1      0      1       2
+                                      −1 −1                         right of zero indicating the MJO has a positive effect on mean
+                              βMJOI [m s h  per 1 SD]                                           −1 −1
+                                                                    intensiﬁcation rates of 0.204msh   per 1 SD [−0.166,
+            Figure 10. Posterior densities of the climate coefﬁcients from the0.574](95%CI)(9.52ktday−1)atthesespatialandtemporal
+            model. (a) βMEI, (b) βNAOI, and (c) βMJOI. Units are expressed asscales.
+            a change in intensiﬁcation (ms−1 h−1) for a 1 standard deviationThe most signiﬁcant factor on intensiﬁcation rates is the
+            (SD) change in the covariate. The red line represents the x = 0 lineNAO.TheNAOIisusedasanindex for the NAO. The pos-
+            (i.e., no effect). The gray lines represent the 95% CI. terior density on the NAOI coefﬁcient (Fig. 10) is shifted to
+                                                                    the left of zero indicating the NAO has a negative effect on
+                                                                                                              −1 −1
+                                                                    mean intensiﬁcation rates with rates of 0.183msh per
+                                              −1 −1                 1 SD [−0.308, −0.0578] (95% CI) (8.54ktday−1) at these
+            tensiﬁcation rates increase by 0.08msh   [0.052, 0.11]
+            (95%CI)(3.7ktday−1).Thismeansthatintensiﬁcationrates    spatial and temporal scales.
+            will increase by 21.6% for every 1◦C warming. This is com-The signiﬁcance of the NAOI in the model was tested by
+            parable to Fraza and Elsner (2015), who found a 16% in- calculating the model output deviance information criterion
+            crease in intensiﬁcation rates for every 1◦C warming. The(DIC) for model runs with different climate factors left out.
+            difference between the increases is likely due to the differentAtotal of six model runs were done, and their DIC scores
+            spatial scales used.                                    are listed in Table 1. The smallest DIC (indicating the best
+              Themagnitudeofintensiﬁcation response to intensity andmodel ﬁt) came when the NAOI was the only climate factor
+            SST varies spatially (Fig. 9). Posterior density values of in-included.
+                                      −1 −1       −1
+            tensity range from 0.0012ms h   perms    in the north-
+            ern part of the basin to 0.014ms−1h−1 perms−1 in the    6 Intensiﬁcation stratiﬁed by NAO years
+            MDR.Ingeneral,therelationshipisstrongerinthedeeptrop-
+            ics and along the east coast. On average in these areas for ev-Here we take a closer look at the relationship between the
+                    −1
+            ery 1ms    increase in mean intensity, mean intensiﬁcationNAOandhurricaneintensiﬁcation. We do this by comparing
+                                    −1 −1           −1
+            rates increase by 0.0083ms h  (0.39ktday  ).            intensiﬁcation rates for the 10 years with the highest NAOI
+              The spatial relationship between local SST and intensiﬁ-in our study period to the intensiﬁcation rates for the 10 years
+            cation is also in agreement with Fraza and Elsner (2015). Onwith the lowest NAOI. We take the ﬁve largest mean inten-
+            averageacrossthebasinforevery1◦Cincreaseinlocalmean     siﬁcation rates from each of these 10 years; if fewer than
+                                                          −1 −1
+            SST, mean intensiﬁcation rates increase by 0.082msh     ﬁve values are available for a particular year we take them
+            (3.83ktday−1). The values throughout the basin range fromall. The 10 most negative NAO years are 1975, 1977, 1978,
+                    −1 −1                           −1 −1
+            0.078ms    h   in the northeast to 0.084ms h   in the   1979, 1980, 1985, 1987, 2001, 2010, and 2013. The 10 most
+            Gulf of Mexico.                                         positive NAO years are 1989, 1990, 1993, 1994, 1995, 1997,
+              As noted above, the main focus of this work is the rela-2000, 2002, 2012, and 2014. This gives us 48 mean intensiﬁ-
+            tionship between intensiﬁcation and climate factors. Here wecation values for the most negative years and 47 mean inten-
+            consider the results from the model for three climate fac-siﬁcation values for the most positive years.
+            tors: ENSO, MJO, and NAO. The MEI is used as an in-
+            dex for ENSO. The peak of the posterior density for the
+            www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/       Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016
+                112                                                                     E. Fraza et al.: Statistical model for hurricane intensiﬁcation
+                                                                                          activity in the North Atlantic basin. The physical explana-
+                                                              10 highest NAOI averaged yearstion for this ﬁnding is unknown, but could be associated with
+                                                              10 lowest NAOI averaged yearsthe position of the North Atlantic subtropical high. Elsner
+                   0.06                                                                   et al. (2000) and Elsner et al. (2001) note that the North At-
+                                                                                          lantic subtropical high is weaker and positioned farther south
+                   0.04                                                                   and west than normal when the NAOI is negative. This fa-
+                                                                                          vors storms tracking westward at a more southerly latitude
+                  Density                                                                 over the warmer oceans. But our model includes SST so that
+                                                                                          is not the entire story. Weaker trade winds associated with a
+                   0.02                                                                   weakerNAO(Marshalletal.,2001)leadtolessverticalwind
+                                                                                          shear and thus a better potential for intensiﬁcation.
+                                                                                             Finally, the ﬁnding that the distribution of hourly intensiﬁ-
+                   0.00                                                                   cation rates scaled to 24h peaks near the level of RI suggests
+                        0           10           20           30           40
+                                                        −1                                that hourly intensiﬁcation at the 24h intensiﬁcation rate is
+                                          Intensification [m s  per day]
+                                                                                          not exceptional, and has been hypothesized in some recent
+                Figure 11. Density plot of ﬁve strongest mean intensiﬁcation val-         research (e.g., Kowch and Emanuel, 2015). Typical hourly
+                ues (scaled to 24h) for each of the 10 highest NAOI years (pink)          intensiﬁcation rates sustained over a day lead to a rare event.
+                                                                          −1     −1
+                and for the 10 lowest NAOI years (blue) in units of ms        day         For instance, Kaplan and DeMaria (2003) deﬁne RI as ap-
+                (1ms−1day−1=1.944ktday−1). The white line is the RI thresh-               proximately the top 5% of all 24h intensiﬁcation. From this,
+                old of 30ktday−1.                                                         we can infer that rare RI events are the result of normal in-
+                                                                                          tensiﬁcation rates but sustained for an unusually long period.
+                   The distribution of intensiﬁcation for negative NAO years              This hints that understanding RI might improve by studying
+                is different than the distribution of intensiﬁcation for posi-            environmental conditions that allow sustained intensiﬁcation
+                tive NAO years (Fig. 11). Here values of intensiﬁcation are               rates.
+                re-scaled to reﬂect 24h intensiﬁcation rates. The peaks are
+                similarly situated near 15ms−1 day−1, which is close to the               8 Summary
+                value of RI (white vertical line), but negative years feature
+                more of the distribution above this value compared to posi-               Climatic effects on hurricane intensiﬁcation rates are inves-
+                tive years. In fact, 58% of the mean intensiﬁcation rates for             tigated for the North Atlantic basin. Hourly intensity and in-
+                the negative NAOIyearsaregreaterthantheRIrate,whereas                     tensiﬁcation rates are averaged on an 8◦ latitude–longitude
+                only 34% of the mean intensiﬁcation rates for the positive                grid. The same grid is used to average seasonal values of
+                NAOIyearsaregreater than the RI rate.                                     SST. Indexes for the ENSO, MJO, and NAO are averaged
+                                                                                          by season. The distribution of annual mean intensiﬁcation,
+                7 Discussion                                                              mean intensity, and mean SST over the period 1975–2014
+                                                                                          are mapped. Regions with the highest intensity and great-
+                Warmerseas and higher intensities are known to have a pos-                est intensiﬁcation rates are co-located with regions of highest
+                itive effect on intensiﬁcation. Elsner et al. (2013) and Gray             SSTsacrossthesouthernpartofthebasinandthesouthwest-
+                (1968) are just two of many studies to note that higher SSTs              ern Caribbean Sea.
+                are beneﬁcial to hurricanes. Elsberry et al. (2007) and Ka-                  A space–time statistical model is employed to quantify
+                plan et al. (2010) noted that many of the strongest hurricanes            the relationships in a multivariate context. A full probability
+                in the North Atlantic basin underwent RI at some point dur-               model is ﬁt using the method of INLA. Posterior densities
+                ing their lifetimes. Our results are in agreement with this re-           of model coefﬁcients summarize the effect a variable has on
+                search. Previous research has also shown that El Niño (pos-               intensiﬁcation. Results show that intensity and SST have a
+                itive MEI) reduces hurricane frequency across the North At-               positive effect on intensiﬁcation consistent with previous re-
+                lantic basin (e.g., Arkin, 1982; Gray, 1984). However, our                search. That is, as intensity and SST increase so do hurricane
+                model shows that El Niño has no statistically signiﬁcant ef-              intensiﬁcation rates. Intensity had the strongest effect on in-
+                fect on intensiﬁcation when using MEI as an index. Further,               tensiﬁcation in the southern part of the basin and along the
+                the MJO has no statistically signiﬁcant effect on intensiﬁca-             east coast. SST had the strongest effect in the southern part
+                tion when using MJOI as an index.                                         of the basin as well as in the Gulf of Mexico.
+                   The biggest revelation is that our model shows the NAO                    When climate factors are included in the model, we ﬁnd
+                has a signiﬁcant negative effect on intensiﬁcation. There is              that the NAO signiﬁcantly affects intensiﬁcation rates after
+                no research concerning the NAO and intensiﬁcation. How-                   controlling for intensity and SST. The peak density shows
+                ever, previous research (e.g., Elsner, 2003; Xie et al., 2005)            that for a 1 SD decrease in the NAO, mean intensiﬁcation
+                                                                                                                    −1 −1
+                shows that a lower NAOI is associated with more hurricane                 increases by 0.183ms         h    (0.36kt). The reason for this
+                Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016                        www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/
+       E. Fraza et al.: Statistical model for hurricane intensiﬁcation113
+       effect is unknown, but it could be due to the position of theBesag, J.: Statistical analysis of non-lattice data, Statistician, 179–
+       North Atlantic subtropical high and the strength of the trade195, 1975.
+       winds. A combination of the high pressure center being fur-Blangiardo, M. and Cameletti, M.: Spatial and Spatio-temporal
+       ther south and west along with weakened trade winds couldBayesian Models with R-INLA, John Wiley & Sons, 2015.
+       allowforgreaterintensiﬁcationrates. In contrast to the NAO,Cressie, N. and Wikle, C. K.: Statistics for spatio-temporal data,
+       the ENSO has little effect on intensiﬁcation rates after con-John Wiley & Sons, 2011.
+       trolling for intensity and SST. This is likely because SST isDeMaria, M., Kaplan, J., and Baik, J.-J.: Upper-level eddy angular
+       already accounted for. Further, the MJO also has little effectmomentum ﬂuxes and tropical cyclone intensity change, J. At-
+       onintensiﬁcation rates as zero is within its 95% CI range.mos. Sci., 50, 1133–1147, 1993.
+        One limitation of this study is the factors not included inElsberry, R. L., Lambert, T. D. B., and Boothe, M. A.: Accuracy
+                                       of Atlantic and Eastern North Paciﬁc Tropical Cyclone Intensity
+       themodel.Forexample,thephaseofthequasi-biennialoscil-Forecast Guidance, Weather Forecast., 22, 747–762, 2007.
+       lation (QBO) and the depth of the Saharan dust layer (Gray,Elsberry, R. L., Chen, L., Davidson, J., Rogers, R., Wang, Y.,
+       1990) might contribute to intensiﬁcation, both of which areand Wu, L.: Advances in understanding and forecasting rapidly
+       missing from the current model. Another limitation is thechangingphenomenaintropicalcyclones,TropicalCycloneRes.
+       spatial scale used for the analysis and modeling. AlthoughRev., 2, 12 pp., 2013.
+       chosen with care to capture the salient features associatedElsner, J. B.: Tracking Hurricanes, B. Am. Meteorol. Soc., 84, 353–
+       with climate inﬂuences on intensiﬁcation, alternative scales356, 2003.
+       are possible that could change the magnitude or signiﬁcanceElsner, J. and Jagger, T.: Hurricane Climatology: A Modern Statis-
+       of the results. Further research is needed to understand thetical Guide Using R, Oxford University Press, USA, 2013.
+       physical role the NAO plays in modulating hurricane inten-Elsner, J., Strazzo, S., Jagger, T., LaRow, T., and Zhao, M.: Sensi-
+       siﬁcation. For example how does the NAO effect vary acrosstivity of Limiting Hurricane Intensity to SST in the Atlantic from
+                                       Observations and GCMs, J. Climate, 26, 5949–5957, 2013.
+       the domain? Finally, do the same climate relationships holdElsner, J., Jagger, T., and Niu, X.: Changes in the rates of North At-
+       in other hurricane basins?      lantic major hurricane activity during the 20th century, Geophys.
+                                       Res. Lett., 27, 1743–1746, doi:10.1029/2000GL011453, 2000.
+                                      Elsner, J. B., Bossak, B. H., and Niu, X.-F.: Secular changes to the
+       9 Dataavailability              ENSO-UShurricanerelationship,Geophys.Res.Lett.,28,4123–
+                                       4126, 2001.
+       Atlantichurricanedataset(HURDAT2) was down-Fraza, E. and Elsner, J.: A Spatial Climatology of North Atlantic
+       loadedfromwww.nhc.noaa.gov/pastall.shtml#hurdat.Hurricane Intensity Change, Int. J. Climatol., 34, 2918–2924,
+       SST data used in this study are from the NOAA Ex-doi:10.1002/joc.3884, 2014.
+       tendedReconstructedSea Surface Temperature V3bFraza, E. and Elsner, J. B.: A climatological study of the effect of
+       (downloadedfromhttp://www.esrl.noaa.gov/psd/data/sea-surface temperature on North Atlantic hurricane intensiﬁca-
+       gridded/data.noaa.ersst.html#detail).Theanalysisandtion, Phys. Geogr., 36, 395–407, 2015.
+       modeling were performed using the open-source R pack-Gray, W. M.: Global view of the origin of tropical disturbances and
+       age for statistical computing. The code and data usedstorms, Mon. Weather Rev., 96, 669–700, 1968.
+       to produce the ﬁgures in this paper are available fromGray,W.:Atlanticseasonalhurricanefrequency,PartII:Forecasting
+       https://github.com/erikf28/FrazaEtAlASCMO.its variability, Mon. Weather Rev., 112, 1669–1683, 1984.
+                                      Gray, W. M.: Strong association between West African rainfall
+                                       and US landfall of intense hurricanes, Science, 249, 1251–1256,
+                                       1990.
+       Acknowledgements. The authors would like to thank editorHijmans, R. J.: raster: Geographic data analysis and modeling,
+       Chris Wikle and two anonymous reviewers for their helpfulRpackage version 2.2-12, http://CRAN.R-project.org/package=
+       commentsandsuggestions.         raster, 2014.
+                                      Hodges, R. E., Jagger, T. H., and Elsner, J. B.: The sun-hurricane
+       Edited by: C. Wikle             connection:Diagnosingthesolarimpactsonhurricanefrequency
+       Reviewed by: two anonymous refereesover the North Atlantic basin using a space–time model, Nat.
+                                       Hazards, 73, 1063–1084, 2014.
+                                      Jarvinen, B. R., Neumann, C. J., and Davis, M. A. S.: A tropical
+                                       cyclone data tape for the North Atlantic basin, 1886–1983: Con-
+       References                      tents, limitations, and uses, Technical Memo. 22, NOAA NWS
+                                       NHC,1984.
+       Arkin, P. A.: The relationship between interannual variability in theKaplan, J. and DeMaria, M.: Large-scale characteristics of rapidly
+        200mb tropical wind ﬁeld and the Southern Oscillation, Mon.intensifying tropical cyclones in the North Atlantic basin,
+        Weather Rev., 110, 1393–1404, 1982.Weather Forecast., 18, 1093–1108, 2003.
+       Balling, R. C. J. and Cerveny, R. S.: Analysis of tropical cycloneKaplan, J., DeMaria, M., and Knaff, J. A.: A revised tropical cy-
+        intensiﬁcation trends and variability in the North Atlantic Basinclone rapid intensiﬁcation index for the Atlantic and Eastern
+        over the period 1970-2003, Meteorol. Atmos. Phys., 93, 45–51,North Paciﬁc basins, Weather Forecast., 25, 220–241, 2010.
+        doi:10.1007/s00703-006-0196-5, 2006.
+       www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016
+       114                         E. Fraza et al.: Statistical model for hurricane intensiﬁcation
+       Klotzbach, P.: El Niño-Southern Oscillation, the Madden–Martins, T. G., Simpson, D., Lindgren, F., and Rue, H.: Bayesian
+        JulianOscillationandAtlanticbasintropicalcyclonecomputing with INLA: new features, Comput. Stat. Data An.,
+        rapidintensiﬁcation,J.Geophys.Res.,117,D14104,67, 68–83, 2013.
+        doi:10.1029/2012JD017714, 2012.NHC: Glossary of NHC Terms, http://www.nhc.noaa.gov/
+       Klotzbach, P. J. and Oliver, E. C.: Modulation of Atlantic Basinaboutgloss.shtml, 2013.
+        Tropical Cyclone Activity by the Madden–Julian OscillationPeduzzi, P., Chatenoux, B., Dao, H., De Bono, A., Herold, C.,
+        (MJO)from1905to2011,J.Climate,28,204–217,2015.Kossin, J., Mouton, F., and Nordbeck, O.: Global trends in tropi-
+       Kowch, R. and Emanuel, K.: Are Special Processes at Work in thecal cyclone risk, Nat. Clim. Change, 2, 289–294, 2012.
+        RapidIntensiﬁcation of Tropical Cyclones?, Mon. Weather Rev.,Pielke Jr., R. A., Gratz, J., Landsea, C. W., Collins, D., Saunders,
+        143, 878–882, 2015.          M. A., and Musulin, R.: Normalized hurricane damage in the
+       Law, K. T. and Hobgood, J. S.: A Statistical Model to ForecastUnited States: 1900–2005, Nat. Hazards Rev., 9, 29–42, 2008.
+        Short-Term Atlantic Hurricane Intensity, Weather Forecast., 22,Wallace, J. and Gutzler, D.: Teleconnections in the geopoten-
+        967–980, 2007.               tial height ﬁeld during the Northern Hemisphere winter, Mon.
+       Madden, R. A. and Julian, P. R.: Description of global-scale circu-Weather Rev., 109, 784–812, 1981.
+        lation cells in the tropics with a 40–50 day period, J. Atmos. Sci.,Wheeler, M. C. and Hendon, H. H.: An all-season real-time multi-
+        29, 1109–1123, 1972.         variate MJO index: Development of an index for monitoring and
+       Marshall, J., Kushnir, Y., Battisti, D., Chang, P., Czaja, A., Dick-prediction, Mon. Weather Rev., 132, 1917–1932, 2004.
+        son, R., Hurrell, J., McCartney, M., Saravanan, R., and Visbeck,Xie, L., Yan, T., Pietrafesa, L. J., Morrison, J. M., and Karl, T.: Cli-
+        M.: North Atlantic climate variability: phenomena, impacts andmatologyandInterannualVariabilityofNorthAtlanticHurricane
+        mechanisms, Int. J. Climatol., 21, 1863–1898, 2001.Tracks., J. Climate, 18, 5370–5381, 2005.
+       Adv. Stat. Clim. Meteorol. Oceanogr., 2, 105–114, 2016www.adv-stat-clim-meteorol-oceanogr.net/2/105/2016/

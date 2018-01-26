@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geohash visualization</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!--<script src="data_spatial.geojson" type="text/javascript"></script>-->
+	<style>
+		#mapid {
+			height: 100vh;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<!--<center><h1 style="font-family: sans-serif">Spatial Information</h1></center>-->
+	<div id="mapid"></div> <!-- Must have 'height' in style argument -->
+
+	<script>
+
+		var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+		var osmAttrib='Leaflet © Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+		var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 15, attribution: osmAttrib});
+
+		var bbox;
+
+		var geojsonFeature;
+
+		var map = new L.map('mapid', {
+			zoomControl: false,
+			attributionControl: false,
+			zoom: 1,
+			layers: [osm] 
+		});
+
+//        var myStyle = {
+//            "color": "#1968ff",
+//            "weight": 2,
+//            "opacity": 0.65
+//        };
+
+        var myStyle = {
+            "stroke": "#1968ff",
+            "stroke-width": 1.6,
+            "stroke-opacity": 0.9,
+            "fill": "#555555",
+            "fill-opacity": 0.1,
+            "name": "Visualization"
+        };
+
+
+
+        var polygons = L.geoJSON(geojsonFeature, {
+            style: myStyle
+        }).addTo(map);
+
+		map.fitBounds(polygons.getBounds());
+		//map.zoomOut();
+
+//		map.on('click', function(e) {
+//			map.remove();
+//			map = new L.map('mapid', {
+//				zoomControl: false,
+//				attributionControl: true,
+//				zoom: 1,
+//				layers: [osm]
+//			});
+//            polygons.addTo(map);
+//
+//		});
+
+		function calculateRectangle(line) {
+			var x0 = line[1];
+			var x1 = line[0];
+			var x2 = line[3];
+			var x3 = line[2];
+			return [[x3,x0],[x3,x2],[x1,x2],[x1,x0]];
+		}
+
+	</script>
+
+</body>
+</html>

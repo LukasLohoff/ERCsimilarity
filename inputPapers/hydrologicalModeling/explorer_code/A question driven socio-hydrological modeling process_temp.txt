@@ -1,0 +1,1143 @@
+        Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+        www.hydrol-earth-syst-sci.net/20/73/2016/
+        doi:10.5194/hess-20-73-2016
+        ©Author(s) 2016. CC Attribution 3.0 License.
+        Aquestiondrivensocio-hydrological modeling process
+              1      2       1,3
+        M.Garcia ,K.Portney ,andS.Islam
+        1Civil & Environmental Engineering Department, Tufts University, 200 College Avenue, Medford, MA 02155, USA
+        2Bush School of Government & Public Service, Texas A&M University, 4220 TAMU, College Station, TX 77843, USA
+        3The Fletcher School of Law and Diplomacy, Tufts University, 160 Packard Avenue, Medford, MA 02155, USA
+        Correspondence to: M. Garcia (margaret.garcia@tufts.edu)
+        Received: 29 July 2015 – Published in Hydrol. Earth Syst. Sci. Discuss.: 24 August 2015
+        Revised: 1 December 2015 – Accepted: 7 December 2015 – Published: 15 January 2016
+        Abstract. Humanandhydrologicalsystemsarecoupled:hu-a result, per capita demand decreases during periods of wa-
+        manactivityimpactsthehydrologicalcycleandhydrologicalter stress are more frequent but less drastic and the additive
+        conditions can, but do not always, trigger changes in humaneffect of small adjustments decreases the tendency of the sys-
+        systems. Traditional modeling approaches with no feedbacktemtoovershootavailablesupplies. This distinction between
+        between hydrological and human systems typically cannotthe two policies was not apparent using a traditional noncou-
+        offer insight into how different patterns of natural variabil-pled model.
+        ity or human-induced changes may propagate through this
+        coupled system. Modeling of coupled human–hydrological
+        systems, also called socio-hydrological systems, recognizes1Introduction
+        the potential for humans to transform hydrological systems
+        andforhydrologicalconditionstoinﬂuencehumanbehavior.Humansbothrespondtoandignore changes in environmen-
+        However, this coupling introduces new challenges and exist-tal conditions. While humans depend on the natural hydro-
+        ing literature does not offer clear guidance regarding modellogical cycle to supply water for both personal and eco-
+        conceptualization. There are no universally accepted laws ofnomic health (Falkenmark, 1977), they also depend on an
+        humanbehaviorasthereareforthephysicalsystems;further-array of other natural and human resources to maintain and
+        more, a shared understanding of important processes withingrow communities. At times water availability can act as the
+        the ﬁeld is often used to develop hydrological models, butlimiting constraint, locally preventing or stalling the expan-
+        there is no such consensus on the relevant processes in socio-sion of human activity. For example, water availability and
+        hydrological systems. Here we present a question driven pro-variability constrained agricultural development in the Tarim
+        cess to address these challenges. Such an approach allowsRiver basin in western China before major water storage and
+        modeling structure, scope and detail to remain contingenttransport infrastructure was constructed (Liu et al., 2014). At
+        on and adaptive to the question context. We demonstrate theother times the water-related risks rise in the background,
+        utility of this process by revisiting a classic question in wa-disconnected from decision making, while other priorities
+        ter resources engineering on reservoir operation rules: whatprevail. For instance, the level of the Aral Sea has continued
+        is the impact of reservoir operation policy on the reliabil-to decline for decades imposing signiﬁcant costs on adjacent
+        ity of water supply for a growing city? Our example modelcommunities but no coordinated effort to stop the decline
+        couples hydrological and human systems by linking the rateemerged (Micklin, 2007). At still other times public policy
+        of demand decreases to the past reliability to compare stan-decisions may work to exacerbate water problems, as when
+        dard operating policy (SOP) with hedging policy (HP). Thedecisions are made to keep municipal water prices artiﬁcially
+        model shows that reservoir storage acts both as a buffer forlow or when “senior water rights” encourage water usage in
+        variability and as a delay triggering oscillations around a sus-the face of shortages (Chong and Sunding, 2006; Hughes et
+        tainable level of demand. HP reduces the threshold for actional., 2013; Mini et al., 2014).
+        thereby decreasing the delay and the oscillation effect. As
+        Published by Copernicus Publications on behalf of the European Geosciences Union.
+      74                  M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+       Human and hydrological systems are coupled. Many im-et al., 2014). At the same time, critique is needed to move
+      pacts of human activity on the hydrological system are nowthe ﬁeld forward as the science is new and lacks established
+      well documented (Tong and Chen, 2002; Wissmar et al.,protocols. Transparency of the model aims, the development
+      2004; Vörösmarty et al., 2010; Vahmani and Hogue, 2014)process,conceptualframeworkandassumptionsarethuspar-
+      and there is increasing evidence that how and when hu-ticularly important. A structured but ﬂexible modeling pro-
+      mans respond individually and collectively to hydrologicalcess can address these challenges by encouraging modelers
+      change has important implications for water resources plan-to clearly deﬁne model objectives, document reasoning be-
+      ning, management and policy (Srinivasan et al., 2010; Dihindchoicesofscale,scopeanddetail,andtakeabroadview
+      Baldassarre et al., 2013; Elshafei et al., 2014). These obser-of potentially inﬂuential system processes.
+      vations have prompted a call to treat humans as an endoge-Inthispaperwepresentaquestiondrivenprocessformod-
+      nous component of the water cycle (Wagener et al., 2010;eling socio-hydrological systems that builds on current mod-
+      Sivapalan et al., 2012). Representing water systems as cou-eling tools from both domains and allows the ﬂexibility for
+      pled human–hydrologicalsystemsorsocio-hydrologicalsys-exploration. Wedemonstratethisprocessbyrevisitingaclas-
+      tems with two-way feedback allows new research questionssic question in water resources engineering on reservoir op-
+      and potentially transformative insights to emerge.eration rules: the tradeoff between standard operating policy
+       Traditional modeling approaches assume that there is no(SOP) and hedging policy (HP). Under SOP, demand is ful-
+      feedback between hydrological and human systems and,ﬁlledunlessavailablesupplydropsbelowdemand;underHP,
+      therefore, cannot provide insights into how different patternswater releases are reduced in anticipation of a deﬁcit to de-
+      of natural variability or human-induced change may prop-crease the risk a large shortfall (Cancelliere et al., 1998). We
+      agate through the coupled system. Over short timescales,add to this classic question a linkage between supply relia-
+      such as a year, many human and hydrological variablesbility and demand. As this question has been asked by nu-
+      can be considered constant and their couplings may be ig-merous researchers before, it offers an excellent opportunity
+      nored (Srinivasan, 2015). However, water resources infras-to test the utility of our proposed modeling framework using
+      tructure decisions have impacts on longer (decadal to cen-a hypothetical municipality called Sunshine City as a case
+      tury) timescales; therefore, there is a need for an approachstudy.
+      that can handle not only long-term variability and nonsta-
+      tionarity in the driving variables (e.g., precipitation, temper-
+      ature, population) but also addresses how these changes can2Modelingsocio-hydrological systems
+      propagate through the coupled system, affecting the struc-
+      ture and properties of the coupled system (Sivapalan et al.,Modeling the interactions between human and hydrological
+      2012; Thompson et al., 2013). Dynamic modeling of socio-systemsexacerbateschallengesfoundinmodelingpurelyhy-
+      hydrological systems recognizes the potential for humans todrological systems including setting the model boundary, de-
+      transform hydrological systems and for hydrological condi-terminingtherelevantprocessesandrelationshipsandclearly
+      tions to inﬂuence human behavior. While human behaviorcommunicating model framing and assumptions. Common
+      is usually incorporated into a model through scenarios, sce-approaches to hydrological modeling are reviewed to put
+      narios cannot include two-way feedback. Building effects ofsocio-hydrological modeling in the context of hydrological
+      human behavior into a simulation model can enable testingmodeling practice. Next, modeling approaches used in sys-
+      of feedback cycles and can illuminate the impact of feed-tem dynamics and social-ecological systems science, both
+      back and path dependencies that are not easily identiﬁable inof which address coupled systems, are described. Then,
+      scenario-based modeling.  socio-hydrological modeling approaches are reviewed and
+       Coupled modeling, on the other hand, introduces newgaps identiﬁed. While no one approach is directly trans-
+      challenges. First, it is not possible to exhaustively modelferrable to socio-hydrological systems, practices from hy-
+      complex systems such as the coupled human–hydrologicaldrological modeling, along with those from integrative dis-
+      system (Sterman, 2000; Schlüter et al., 2014). Bounds mustciplines, serve as a baseline for comparison and inform our
+      be set to develop an effective model but researchers are chal-socio-hydrological modeling process. We then present our
+      lenged to objectively deﬁne the scope of coupled modelingrecommendations for socio-hydrological model conceptual-
+      studies. Second, by deﬁnition coupled models cross disci-ization.
+      plines and modelers are unable to point to the theoretical
+      framework of any single discipline to defend the relevant2.1Modelinghydrological systems
+      scope (Srinivasan, 2015). At the same time researchers must
+      balance the scope and level of detail in order to create aIn hydrology the basic steps of model development are
+      parsimonious and communicable model. Finally, critical as-(a) data collection and analysis, (b) conceptual model devel-
+      sessment of models is more challenging when the theories,opment, (c) translation of the conceptual model to a mathe-
+      empirical methods and vocabulary drawn upon to create andmatical model, (d) model calibration and (e) model valida-
+      communicateamodelspandisciplinaryboundaries(Schlütertion (Blöschl and Sivapalan, 1995). While the basic steps
+      Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/
+      M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process75
+      of model development are generally accepted, in practicethe sawmill industry in the northeastern United States focus
+      approaches diverge, particularly in conceptual model de-on understanding if the system has the structural potential to
+      velopment. In hydrology, Wheater et al. (1993) identiﬁedovershoot sustainable yield. While the resulting model is a
+      four commonly used modeling approaches: physics-based,signiﬁcant simpliﬁcation of a complex system, the reason for
+      concept-based (also called conceptual), data driven and hy-inclusion of tree growth dynamics, mill capacity and lumber
+      brid data–conceptual. Physics-based models represent a sys-prices and the exclusion of other variables is clear. Second,
+      tembylinkingsmall-scalehydrologicalprocesses(Sivapalansystem dynamics and social-ecological systems science use
+      et al., 2003). Concept-based models use prior knowledge tomultiple data sources, both quantitative and qualitative, to
+      specify the inﬂuential processes and determine the structure.specify and parameterize model relationships. Omitting in-
+      Data driven models are derived primarily from observationsﬂuential relationships or decision points due to lack of quan-
+      and do not specify the response mechanism. Hybrid data–titative data results in a greater error than their incorrect spec-
+      conceptual models use data and prior knowledge to inferiﬁcation (Forrester, 1992). Third, system dynamics focuses
+      modelstructure(Wheateretal.,1993;Sivapalanetal.,2003).ondevelopingadynamichypothesisthatexplainsthesystem
+       Modeling purpose typically determines the modeling ap-behaviorofinterest in terms of feedback processes (Sterman,
+      proach. Environmental models may be developed to formu-2000). Finally, social-ecological systems science has found
+      late and test theories or to make predictions (Beven, 2002).that the use of frameworks as part of a structured model de-
+      Physics-based models can be used to test theories aboutvelopment process can aid transparency and comparability
+      small-scale processes or to predict catchment response byacross models (Schlüter et al., 2014).
+      scaling up these processes. Concept-based models hypoth-
+      esize the important elements and processes and their struc-2.3Progress and gaps in socio-hydrological modeling
+      ture of interaction to answer a question or predict a certain
+      property, although hypotheses are often not explicitly statedSeveral research teams have operationalized the concepts
+      and tested (Wheater et al., 1993). A reliance on prior knowl-of socio-hydrology using approaches ranging from simple
+      edge limits the applicability of concept-based modeling ingeneric models to contextual data-driven models. Di Baldas-
+      ﬁelds lacking consensus on both the presence and relevancesarre et al. (2013) developed a simple generic model to ex-
+      of feedback processes. Data driven models are effective inplore the dynamics of human–ﬂood interactions for the pur-
+      prediction. While they have potential for hypothesis testing,pose of showing that human responses to ﬂoods can exacer-
+      a focus on black box input–output models limits insight intobate ﬂooding problems. Viglione et al. (2014) extended this
+      system processes and the ability to extrapolate beyond ob-worktotesttheimpactofcollectivememory,risk-takingatti-
+      served data (Sivapalan et al., 2003). Hybrid data–conceptualtudeandtrustinriskreductionmeasuresonhuman–ﬂooddy-
+      models use data and other knowledge to generate and testnamics. Kandasamyetal.(2014)analyzedthepast100years
+      hypotheses about the structure of the system (Wheater et al.,of development in the Murrumbidgee River basin in eastern
+      1993; Young, 2003). As socio-hydrology is a new area of re-Australia and built a simple model of the transition from the
+      search, prior knowledge alone is insufﬁcient and the focusdominanceofagriculturaldevelopmentgoals,throughaslow
+      is on modeling to enhance understanding through hypothesisrealization of adverse environmental impacts, to emergence
+      generationandtesting;hybriddata–conceptualmodelingtac-ofseriousecologicalrestorationefforts.Elshafeietal.(2014)
+      tics aimed at enhancing understanding therefore inform ourproposed a conceptual socio-hydrological model for agricul-
+      proposed process.         tural catchments and applied it to the Murrumbidgee and the
+                                Lake Toolibin basins; they then built upon this conceptual
+      2.2Modelingcoupledsystems model to construct a detailed semi-distributed model of the
+                                Lake Toolibin basin (Elshafei et al., 2015). Srinivasan and
+      While coupling of natural and human systems is in its in-collaborators analyzed water security in the city of Chennai,
+      fancy in hydrology, there is a strong tradition of studyingIndia. By modeling the feedback between household level
+      coupled systems in the ﬁelds of system dynamics and social-copingmechanismsandregional-scalestressors,theteamex-
+      ecological systems. These ﬁelds have developed approachesplained the counterintuitive effects of policy responses such
+      to understand and model complex systems and can informas the observation that reduced groundwater recharge caused
+      a socio-hydrological modeling process. First, in both ﬁeldsby ﬁxing leaky pipelines decreased a household’s ability to
+      the research question or problem drives modeling decisions.usewellstocopewithwatersysteminterruptions(Srinivasan
+      Much of the work to date on socio-hydrological systems iset al., 2010, 2013).
+      exploratory and aims to explain evidence of system couplingResearchers have also addressed the methodological ques-
+      seen in case data. Developing a model to answer a questiontions of how to frame and model socio-hydrological sys-
+      or solve a problem allows a more structured and defensibletems. Blair and Buytaert (2015), provide a detailed review
+      framework to support the modeling decisions and providesof the model types and modeling methods used in socio-
+      a benchmark for model validation (Sterman, 2000; Hinkelhydrology and those that may have utility in the ﬁeld. Siva-
+      et al., 2015). For example, Jones et al. (2002), in modelingpalanandBlösch(2015)offerguidanceonframingandmod-
+      www.hydrol-earth-syst-sci.net/20/73/2016/Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+      76                  M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+      eling socio-hydrological systems from stating framing as-Blöschl, 2015). However, complex systems such as socio-
+      sumptions to model validation techniques and highlight thehydrological systems cannot be modeled exhaustively (Ster-
+      speciﬁc challenges of scale interactions found in these cou-man, 2000; Schlüter et al., 2014). Rather, model conceptu-
+      pled systems. Elshafei et al. (2014) and Liu et al. (2014) de-alization must balance sufﬁcient process representation and
+      tailed the development of conceptual models, giving readersparsimony (Young et al., 1996; Ostrom, 2007).
+      insight into the framing of their case study work.Model conceptualization is based on general assumptions
+       Thesemethodological advances have begun to address theabout how a system works. Often these assumptions are im-
+      many challenges of translating the concept of feedback be-plicit and not challenged by others within the same research
+      tween human and hydrological systems into actionable sci-community (Kuhn, 1996). This works well when research
+      ence. However, obstacles remain: principally, expanding thestays within the bounds of the existing methods, theories
+      scope of modeling to include societal systems and humanand goals of one’s research community; when working in
+      decision-making exacerbates the challenges of setting thenew intellectual territory, research community norms can-
+      model boundary and process detail, and of evaluating thosenot be relied upon to guide assumptions. Further disciplinary
+      choices. The source of this challenge is twofold. First, theretraining is highly successful at teaching these community
+      are fundamental differences between natural and social sys-norms, and researchers working on interdisciplinary projects
+      tems. The laws governing physical, chemical and biologicalmust actively question the framing assumptions they bring
+      systemssuchasconservationofmassandenergyarebroadlyto the project (Lélé and Norgaard, 2005; McConnell et al.,
+      applicable across contexts; the relevance of rules inﬂuenc-2009). By its integrative nature, socio-hydrological model-
+      ing social systems varies by context. Second, the modelinging crosses disciplines and modelers are unable to point to
+      of coupled human–hydrological systems is new intellectualthe theoretical framework of any single discipline to make
+      territory. At this intersection the norms and unstated assump-simplifying assumptions (Srinivasan, 2015). In absence of
+      tions instilled by disciplinary training must be actively ques-research community norms, we must return to modeling fun-
+      tioned and examined within a transparent model develop-damentals. Models are simpliﬁcations of real systems that,
+      ment, testing and validation process.in a strict sense, cannot be validated but the acceptability of
+       There are no universally accepted laws of human behaviormodel assumptions for the question at hand can be assessed
+      as there are for the physical and biological sciences (Loucks,(Sterman, 2000). Careful articulation of the research ques-
+      2015). While institutions (formal and informal rules) inﬂu-tions links the assessment of important variables and mech-
+      ence behavior, the impact of institutions on the state of theanisms to the question context. This allows the critique to
+      systemdependsonwhetherpeoplefollowtherules(Schlagerfocus on the acceptability of these choices relative to model
+      and Heikkila, 2011). Additionally, these rules are not static.goals and enables critical assessment of the range of appli-
+      In response to outcomes of past decisions or changing con-cability of identiﬁed processes through case and model com-
+      ditions, actors change both the rules that shape the optionsparison.
+      available for practical decisions and the rules governing theThe recent Water Resources Research Debate Series of-
+      collective choice process throughwhichtheseoperationrulesfers an excellent illustration of this point. Di Baldassarre
+      are made (McGinnis, 2011). Furthermore, water policy de-et al. (2015) catalyze the debate by presenting a generic
+      cisions are not made in isolation of other policy decisions.model of human–ﬂood interaction. This model incorporates
+      Decisions are interlinked as the same actors may interactboth the “levee effect”, in which periods of infrequent ﬂood-
+      with and get affected differently depending on the contextsing (sometimes caused by ﬂood protection infrastructure) in-
+      (McGinnis, 2011b). The outcome of a related policy deci-crease the tendency for people to settle in the ﬂoodplain, and
+      sion mayalter the choices available to actors or the resourcesthe “adaptation effect”, in which the occurrence of ﬂooding
+      available to address the current problem. The state of the hy-leads to an adaptive response. In the model they link ﬂood
+      drological system, particularly during extreme events, canfrequency and adaptive action through a social memory vari-
+      spark institutional changes; yet, other factors such as polit-able which increases with the occurrence of ﬂoods and de-
+      ical support and ﬁnancial resources as well as the prepared-caysslowlyovertime;ﬂoodoccurrencedirectlytriggerslevee
+      ness of policy entrepreneurs also play a role (Crow, 2010;heighteningintechnologicalsocietiesandindirectly, through
+      Hughes et al., 2013). Given this complexity, Pahl-Wostl etthe social memory, decreases ﬂoodplain population density
+      al. (2007) argue that recognizing the unpredictability of pol-(Di Baldassarre et al., 2015).
+      icy making and social learning would greatly improve theIn the debate this modeling approach is both commended
+      conceptualization of water management. Nevertheless, someas an impressive innovation and critiqued for its simpli-
+      dynamics persist across time and space; water managementﬁcation of social dynamics (Gober and Wheater, 2015;
+      regimes persist for decades or centuries and some transitionsLoucks,2015;Sivapalan,2015;Troyetal.,2015).Goberand
+      in different locations share characteristics (Elshafei et al.,Wheater (2015) note that while social or collective memory
+      2014;Kandasamyetal.,2014;Liuetal.,2014).Furthermore,is an important factor in ﬂood resilience it does not determine
+      modeling is a useful tool to gain insight into the impactsﬂood response; ﬂood awareness may or may not result in an
+      of these dynamics (Thompson et al., 2013; Sivapalan andadaptive response based on the way individuals, the media
+      Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/
+       M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process77
+       and institutions process the ﬂood threat, the social capacityRESEARCH QUESTION
+       for adaptation and the preparedness of policy entrepreneurs,
+       among other factors. Loucks (2015) observes that data on
+       past behavior is not necessarily an indicator of future be-VARIABLES & RELATIONSHIPSOUTCOME INDICATORS
+       havior and suggests that observing stakeholder responses to
+       simulated water management situations may offer additional
+       insight. Troy et al. (2015) and Di Baldassarre et al. (2015)ASONINGASONING
+       note that the human–ﬂood interaction model presented rep-PROCESSESPROCESSES
+       resents a hypothesis of system dynamics which allows forARD REARD RE
+       exploration, and that simple stylized models enable gener-W W
+                                        OR                         CK
+       alization across space and time. In sum, the debate presentsFA
+                                          OUTCOME INDICATORSVARIABLES & RELATIONSHIPSB
+       different perspectives on the acceptability of the modeling
+       assumptions.
+        A close look at how the debate authors critique and
+       commend the human–ﬂood interaction model illustratesCONCEPTUAL MODEL
+       that the acceptability of modeling assumptions hingesFigure 1. Backward-reasoning process (adapted from Schlüter et
+       upon the model’s intended use. For example, Gober andal., 2014).
+       Wheater(2015)critique the simplicity of social memory as a
+       proxy for social system dynamics but acknowledge the util-
+       ity of the model in clarifying the tradeoffs of different ap-
+       proaches to meet water management goals. As we can neveredge is insufﬁcient (Arocha et al., 1993). As few researchers
+       have comprehensive representation of a complex and cou-have expert knowledge of all domains involved in socio-
+       pled human–hydrological system, we need transparency ofhydrological modeling and data is often sparse, a backward-
+       the abstracting assumptions and their motivation. This is notreasoning approach is here used to conceptualize a socio-
+       a new insight; however, a question driven modeling processhydrological model. Additionally, this outcome-oriented ap-
+       allows the ﬂexibility and transparency needed to examine theproach will focus the scope of the model on the question’s
+       acceptability of model assumptions while acknowledging therelevant variables and processes.
+       role of context and the potential for surprise.The research question helps to deﬁne the outcome met-
+                                       ric(s) of interest; however, determining the relevant processes
+       2.4Aquestiondrivenmodelingprocessand variables requires further analysis. One tool to identify
+                                       inﬂuential processes and variables is the dynamic hypothe-
+       Our proposed process begins with a research question. Thesis. A dynamic hypothesis is a working theory, informed by
+       research question is then used to identify the key outcomedata, of how the system behavior in question arose (Sterman,
+       metric(s). A dynamic hypothesis is developed to explain the2000). It is dynamic in nature because it explains changes
+       behavior of the outcome metric over time; a framework canin behavior over time in terms of the structure of the system
+       be used to guide and communicate the development of the(Stave, 2003). The dynamic hypothesis could encompass the
+       dynamic hypothesis. Remaining model processes are thenentire socio-hydrological model, but in practice many pro-
+       speciﬁed according to established theory.cesses within a model will be based on established theory
+        As emphasized by both system dynamics and social-such as rainfall runoff or evaporation processes. The intent is
+       ecological systems researchers, the research question drivesto focus the dynamic hypothesis on a novel theory explaining
+       the process of system abstraction. One way to think aboutobserved behavior. Stating the dynamic hypothesis clariﬁes
+       this process of abstraction is through the lens of forwardwhich portion of the model is being tested.
+       and backward reasoning. Schlüter et al. (2014) introducedAframeworkcanaidthedevelopment of the dynamic hy-
+       the idea of forward and backward reasoning to develop con-potheses and the communication of the reasoning behind
+       ceptual models of social-ecological systems. In a backward-it. The use of frameworks enhances the transparency of
+       reasoning approach, the question is ﬁrst used to identify in-modeldevelopmentbyclearly communicating the modeler’s
+       dicators or outcome metrics; next, the analysis proceeds tobroad understanding of a system. Socio-hydrological model-
+       identify the relevant processes and then the variables anders can develop their own framework (Elshafei et al., 2014)
+       their relationships, as seen in Fig. 1 (Schülter et al., 2014).ordrawonexistingframeworksthataddresscoupledhuman–
+       These three pieces then form the basis for the conceptualhydrological systems such as the social-ecological systems
+       model. In contrast, a forward-reasoning approach begins(SES) framework, the management transition framework,
+       withtheidentiﬁcation of variables and relationships and thenor the integrated structure–actor–water framework (Ostrom,
+       proceeds toward outcomes. Forward reasoning is most suc-2007; Pahl-Wostl et al., 2010; Hale et al., 2015).
+       cessful when there is expert knowledge of the system, andTo illustrate how a framework may be used in model con-
+       backward-reasoning is useful primarily when prior knowl-ceptualization we will focus on the SES framework. The SES
+       www.hydrol-earth-syst-sci.net/20/73/2016/Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+         78                            M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+         framework is a nested conceptual map that partitions the at-Table 1. Summary of Sunshine City properties.
+         tributes of a social-ecological system into four broad classes:
+         (1) resource system, (2) resource units, (3) actors and (4) theSunshine City properties
+         governance system (McGinnis and Ostrom, 2014). Each ofVariable Value   Units
+         the four top tier variables has a series of second tier (and po-      3 −1
+         tentially higher tier) variables; for example, storage charac-Blue River mean ﬂow2km yr
+                                                                               3 −1
+         teristics and equilibrium properties are second tier attributesBlue River variance0.5km yr
+         of the resource system (Ostrom, 2009). The SES frameworkBlue River lag 1 autocorrelation0.6–
+                                                                                 −1
+         prescribes a set of elements and general relationships to con-Average evaporation rate1myr
+         sider when studying coupled social and ecological systemsPopulation1000000people
+         (Ostrom, 2011). The variables deﬁned in the SES frame-Average annual growth rate3%
+                                                                               3 −1
+         work were found to impact the interactions and outcomes ofPer capita water usage400m yr
+                                                                                 −3
+         social-ecological systems in a wide range of empirical stud-Water price0.25USDm
+         ies (Ostrom, 2007). In addition to specifying candidate vari-Reservoir capacity0.2km3
+         ables, the SES framework speciﬁes broad process relation-Reservoir slope0.1–
+         ships (Schlüter et al., 2014). At the broadest level, SES spec-
+         iﬁes that the state of the resource system, governance system,responsible for setting water efﬁciency codes and other con-
+         resource unit properties and actor characteristics inﬂuenceservationrules.Thecurrentbuildingcodeincludesonlybasic
+         interactions and are subsequently inﬂuencedbytheoutcomesefﬁciencies required by the national government. The Blue
+         of those interactions. To operationalize the SES frameworkRiver, along with other regional sources, is fully allocated
+         for model conceptualization one must move down a levelmakingfutureaugmentationofsuppliesunlikely.SeeTable1
+         to assess the relevance of the tier two variables against caseaboveforasummaryofkeycharacteristicsofSunshineCity.
+         data and background knowledge. This review aims to checkAlong with the rest of the region, Sunshine City’s popula-
+         the dynamic hypothesis against a broader view of coupledtion, and its water demand, has grown rapidly over the past
+         system dynamics and to inform determination of remainingfew years. Managers at the Water Utility are concerned they
+         model processes.                       will no longer be able to meet its reliability targets as de-
+          The following case presents the development of a socio-mands rise and have added a reservoir to increase future re-
+         hydrological (coupled) and a traditional (noncoupled) modelliability. They now must decide how to operate the reservoir
+         to illustrate this process. While this process is developed toand are considering two options: standard operating policy
+         study real-world cases a hypothetical case is used here for(SOP) and hedging policy (HP). The selected operating pol-
+         simplicity, brevity and proof of concept.icy must satisfy downstream user rights and maintain min-
+                                                imum ecological ﬂows. In addition to meeting the legal re-
+         3 Sunshine City: a case study of reservoir operationsquirements, the Water Utility managers are concerned with
+                                                ﬁnding a policy that will enable the city to provide the most
+         Sunshine City is located in a growing region in a semi-aridreliable water supply throughout the lifetime of the reservoir
+         climate. The region is politically stable, technologically de-(50–100 years). From experience they have observed that
+         veloped, with a market economy governed by a representa-both water price and reliability affect demand. A key puz-
+         tive democracy. Sunshine City draws its water supply fromzle that emerges for water managers from this experience is:
+         the Blue River, a large river which it shares with downstreamhowdooperational rules governing use of water storage in-
+         neighbors. The water users must maintain a minimum ﬂowﬂuence long-term water supply reliability when consumers
+         in the Blue River for ecological health. Sunshine City canmake water usage decisions based on both price and relia-
+         draw up to 25% of the annual ﬂow of the Blue River in anybility?
+         given year. A simple prediction of the year’s ﬂow is made byAs the question implies, the Water Utility managers have
+         assuming that the ﬂow will be equal to the previous year’sa working hypothesis relating demand change with water
+         ﬂow; the resulting errors are corrected by adjusting the nextshortages. Therefore, along with the research question the
+         year’s withdrawal.                     following dynamic hypothesis is considered: the occurrence
+          The city’s Water Utility is responsible for diverting, treat-of water shortages increases the tendency of users to adopt
+         ing and transporting water to city residents and businesses.water conservation technologies and to make long-term be-
+         It is also tasked with making infrastructure investment deci-havioral changes. HP triggers shortages sooner than SOP
+         sions, setting water prices. Water users receive plentiful sup-thus triggering earlier decreases in demand.
+         ply at cost and there have been no shortages in recent years.
+         While located in a semi-arid environment, the large size of
+         Sunshine City’s Blue River water availability and allocation
+         created a comfortable buffer. The city’s Water Utility is also
+         Hydrol. Earth Syst. Sci., 20, 73–92, 2016        www.hydrol-earth-syst-sci.net/20/73/2016/
+           M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process                              79
+                                                  1                                                1
+             ASE                 DP             1              ASEDP                              1
+             RELE                                              RELE
+                                                  VMAX
+                             DP                       + DP                                          VMAX
+                   1                                                               KPDP                 + DP
+                                                                        1
+                  1                                                  KP
+                   S
+                    T
+                     ORA
+                        GE A
+                            T THE EN
+                                   D OF PREVIOUS                     S
+                                                                      T
+                                                                       ORA
+                                                                          GE A
+                                                                             T THE EN
+                                                                                     D OF PREVIOUS 
+                    PERIOD PL
+                             US PREDICTED IN
+                                            FL
+                                             O
+                                              W                       PERIOD PL
+                                                                               US PREDICTED IN
+                                                                                             FL
+                                                                                               O
+                                                                                                W
+           Figure2.Standardoperatingpolicy, where D is per capita demand,Figure 3. Hedging policy, where Kis hedging release function
+           P is population and Vis reservoir capacity (adapted from Shih              P
+                          max                                slope (adapted from Shih and ReVelle, 1994).
+           and ReVelle, 1994).
+                                                             nonlinear and convex; in other words that a severe shortage
+           3.1 Background                                    has a larger impact than the sum of several smaller short-
+                                                             ages (Shih and ReVelle, 1994). Gal (1979) showed that the
+           Thedecision of how much water to release for use each timewater shortage loss function is convex, thereby proving the
+           period is deceptively complex due to the uncertainty of fu-utility of hedging as a drought management strategy. Other
+           ture streamﬂows and the nonlinear beneﬁts of released waterresearchers have shown that hedging effectively reduces the
+           (Shih and ReVelle, 1994; Draper and Lund, 2004). In mak-maximum magnitude of water shortages and increases total
+           ing release decisions, water utilities must fulﬁll their man-utility over time (Shih and ReVelle, 1994; Cancelliere et al.,
+           date to maintain a reliable water supply in a ﬁscally efﬁcient1998). More recent work by Draper and Lund (2004) and
+           manner. Reliability is the probability that the system is inYou and Cai (2008) conﬁrms previous ﬁndings and demon-
+           a satisfactory state (Hashimoto et al., 1982). In this case, astrates the continued relevance reservoir operation policy se-
+           satisfactory system state is one in which all demands on thelection.
+           system can be met. The deﬁnition of an unsatisfactory stateResearchers and water system managers have for decades
+           is more nuanced. Water shortages have a number of charac-sought improved policies for reservoir operation during
+           teristics that are important to water management includingdroughtperiods(Boweretal.,1962;ShihandReVelle,1994;
+           frequency, maximum shortage in a given time period, andYou and Cai, 2008). We add to this classic question the ob-
+           length of shortage period (Cancelliere et al., 1998). Long-servation that water shortages inﬂuence both household con-
+           term reliability here refers to the projected reliability overservation technology adoption rates and water use behav-
+           several decades. The time frame used for long-term projec-ior. In agreement with Giacomoni et al. (2013), we hypoth-
+           tions varies between locations and utilities (i.e., Boston usesesize that the occurrence of water shortages increases the
+           a 25-year time frame, Denver uses a 40-year time frame, andtendency of users to adopt water conservation technologies
+           Las Vegas uses a 50-year time frame) and a 50-year timeandtomakelong-termbehavioralchanges.Householdwater
+           frame is used here (MWRA, 2003; SNWA, 2009; Denverconservation technologies include low ﬂow faucets, shower
+           Water, 2015).                                     heads and toilets, climatically appropriate landscaping, grey
+             Twooperationalpolicies,SOPandHP,arecommonlyused water recycling and rainwater harvesting systems (Schuetze
+           to address this decision problem. Under SOP, demand is al-and Santiago-Fandiño, 2013). The adoption rates of these
+           ways fulﬁlled unless available supply drops below demand;technologies are inﬂuenced by a number of factors includ-
+           under HP, water releases are limited in anticipation of an ex-ing price, incentive programs, education campaigns and peer
+           pected deﬁcit (Cancelliere et al., 1998). Hedging is used asadoption (Campbell et al., 2004; Kenney et al., 2008). A re-
+           a way to decrease the risk of a large shortfall by imposingview of studies in the US, Australia and UK showed that
+           conservation while stored water remains available. Figures 2the installation of conservation technologies results in indoor
+           and3illustrate SOP and HP, respectively. For this simple ex-water savings of 9–12% for ﬁxture retroﬁts and 35–50%
+           periment only linear hedging, where K is the slope of thefor comprehensive appliance replacements (Inman and Jef-
+                                         P
+           release function, is tested.                      frey, 2006). In some cases offsetting behavior reduces these
+             Thetraditional argument for hedging is that it is economi-potential gains; however, even with offsetting, the adoption
+           cal to allow a small deﬁcit in the current time period in orderof conservation technologies still results in lower per capita
+           to decrease the probability of a more severe shortage in a fu-demands (Geller et al., 1983; Fielding et al., 2012). Wa-
+           ture time periods (Bower et al., 1962). This argument holdster use behavior encompasses the choices that individuals
+           true if the loss function associated with a water shortage ismake related to water use ranging from length of showers
+           www.hydrol-earth-syst-sci.net/20/73/2016/                      Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+       80                     M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+       Table 2. Household conservation action by shortage experienceally experienced a water shortage and which, if any, house-
+       (ISTPP, 2013).                 hold efﬁciency upgrade or behavioral change actions their
+                                      household had taken in the past year. Efﬁciency upgrade op-
+        Last experiencedPercent of households, over thetions offered included low-ﬂow shower heads, low-ﬂush toi-
+        a water shortagepast year, that havelets and changes to landscaping; behavioral options given in-
+                    invested inchangedtakencluded shorter showers, less frequent dishwasher or wash-
+                  efﬁcient ﬁxtureswater usenoing machine use, less frequent car washing and changes to
+                   or landscapesbehavioractionyard watering (ISTPP, 2013). As seen in Table 2, respon-
+        Within a year  56%  88% 11%   dents who had recently experienced a water shortage were
+        1–2years ago   52%  87% 11%   more likely to have made efﬁciency investments and to have
+        2–5years ago   51%  78% 17%   changed their water use behavior. This ﬁnding is corrobo-
+        6–9years ago   50%  79% 18%   ratedbyarecentsurveyofColoradoresidents.Ofthe72%of
+        10 or more years ago42%74%24% respondents reporting increased attention to water issues, the
+        Never experienced36%66% 31%   most-cited reason for the increase (26% of respondents) was
+                                      a recent drought or dry year (BBC Research, 2013). Other
+                                      reasons cited by an additional 25% of respondents including
+       and frequency of running the dishwasher to timing of lawnnews coverage, water quantity issues and population growth
+       watering and frequency of car washing. Water use behaviormayalsoberelated water shortage concerns or experiences.
+       is shaped by knowledge of the water system, awareness ofThe increased receptivity of the public to water conserva-
+       conservation options and their effectiveness, and consumer’stion measures and the increased willingness of water users
+       attitudes toward conservation (Frick et al., 2004; Willis etto go along with these measures during shortage events com-
+       al., 2011). Changes to water use behavior can be promptedbine to drive changes in per capita demands. The combined
+       by price increases, education campaigns, conservation reg-effect of these two drivers was demonstrated in a study
+       ulations and weather (Campbell et al., 2004; Kenney et al.,of the Arlington, Texas, water supply system (Giacomoni
+       2008; Olsmtead and Stavins, 2009).et al., 2013; Kanta and Zechman, 2014). Additional exam-
+        As a city begins to experience a water shortage, the wa-ples of city- and regional-scale drought response leading to
+       ter utility may implement water restrictions, price increases,long-term demand decreases include the droughts of 1987–
+       incentive programs or education campaigns to inﬂuence con-1991andthemid-2000sinCalifornia and of 1982–1983 and
+       sumer behavior. While staff within the water utility or city1997–2009inAustralia(Zilbermanetal.,1992;Turral,1998;
+       may have planned these measures before, the occurrence ofSivapalan et al., 2012; Hughes et al., 2013). It is often dif-
+       a water shortage event, particularly if it aligns with otherﬁcult to separate the relative effects of the multiple price
+       driving forces, offers a window of opportunity to implementand nonprice approaches applied by water utilities during
+       sustainable water management practices (Jones and Baum-droughts (Olmstead and Stavins, 2009). The point is, how-
+       gartner, 2005; Hughes et al., 2013). In addition, water usersever, that the response generally points to lower per capita
+       are more likely to respond to these measures with changeswater demands.
+       in their water use behavior and/or adoption of conservationOneexampleoflasting water use reductions after a short-
+       technologies during shortages. Baldassare and Katz (1992)ageisthe1987–1992droughtinLosAngeles,California.An
+       examined the relationship between the perception of risk toextensive public awareness and education campaign sparked
+       personal well-being from an environmental threat and adop-bothbehavioralchangesandtheadoptionofefﬁcientﬁxtures
+       tion of environmental practices with a personal cost (ﬁnan-such as low-ﬂow shower heads and toilets and increasing
+       cial or otherwise). They found that the perceived level of en-block pricing introduced after the drought helped maintain
+       vironmental threat is a better predictor for individual envi-conservation gains (LADWP, 2010). Evidence of the lasting
+       ronmental action, including water conservation, than demo-effect can be seen in Fig. 4. Per capita water demands do not
+       graphic variables or political factors. Illustrating this effect,return to 1990 levels after the drought ends in 1992. Note that
+       MankadandTapsuwan(2011)foundthatadoptionofalterna-the data below also contains a counter example. The 1976–
+       tive water technologies, such as on-site treatment and reuse,1977 drought caused a sharp drop in water consumption in
+       is increased by the perception of risk from water scarcity.LosAngeles;however,consumptionquicklyreturnedtopre-
+        Evidence of individual level behavior change can also bedrought levels when the rainfall returned in 1978. While the
+       seenintheresultsofa2013nationalwaterpolicysurveycon-1976–1977 drought was more intense than any year in the
+       ducted by the Institute for Science, Technology and Public1987–1992 drought, the long duration of the later drought
+       Policy at Texas A&M University. The survey sampled overcaused deeper draw downs in the city’s water reserves ul-
+       3000 adults from across the United States about their atti-timately prompting transformative action (LADWP, 2010).
+       tudes and actions related to a variety of water resources andThis may indicate that the impact of the 1976–1977 drought
+       public policy issues. Included in the survey were questionswas below the threshold for signiﬁcant action or that other
+       that asked respondents how recently, if ever, they person-priorities dominated public attention and resources at the
+       Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/
+             M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process                                               81
+               )200                                                     characteristics and water demand to interactions; other vari-
+               y
+               a                                                        ables were modiﬁed to reﬂect the language typically used
+                d
+               r
+               e                                                        in the water sciences (i.e., supply in place of harvesting).
+                p150
+               s                                                        See Table 3 for urban water speciﬁc modiﬁcation of the SES
+               n
+               o
+               l
+               l                                                        framework.
+               a
+               g
+                (100                                                      We then assess the relevance of the tier two variables
+               d
+               n
+               a                                                        against case data and background knowledge (summarized
+               m                                                        in Sects. 3 and 3.1, respectively) by beginning with the out-
+                de50
+               a
+               t                                                        come metric, reliability. Within the framework reliability is
+               i
+               p                                                        an outcome variable, speciﬁcally a social performance met-
+                ca
+               r
+               e 0                                                      ric, and it is the direct result of water supply and water de-
+               P
+                   1970       1980       1990       2000      2010      mand interaction processes. Water supply encompasses the
+                                         Year                           set of utility level decisions on reservoir withdrawals and
+             Figure4.HistoricalcityofLosAngeleswateruse(LADWP,2010).    discharges. As detailed in the case description, these deci-
+                                                                        sions are shaped by the selected reservoir operating policy,
+                                                                        streamﬂow, the existing environmental ﬂow and downstream
+             time. In sum, the Los Angeles case serves both to illustrateallocation requirements, reservoir capacity, water in storage
+             that hydrological change can prompt long-term changes in   and water demands. Streamﬂow is a stochastic process that
+             water demands and as a reminder that multiple factors inﬂu-is a function of many climatic, hydraulic and land surface
+             ence water demands and hydrological events will not always parameters. However, given the driving question and the as-
+             dominate.                                                  sumption that the city represents only a small portion of the
+                                                                        overall watershed, a simple statistical representation is sufﬁ-
+             3.2  Modeldevelopment                                      cient and streamﬂow is assumed independent of other model
+                                                                        variables.
+             The Sunshine City water managers want to understand how      Total water demand is a function of both population and
+             theoperationalrulesgoverninguseofwaterstorageinﬂuence      per capita demand. As described in the background section,
+             long-termwatersupplyreliabilitywhenconsumersmakewa-        per capita water demand changes over time in response to
+             ter usage decisions based on price and reliability. A modelhousehold level decisions to adopt more water efﬁcient tech-
+             can help the managers gain insight into system’s behavior  nologies and water use behavior change made by individuals
+             by computing the consequences of reservoir operation pol-  in each time interval; these decisions may be inﬂuenced by
+             icy choice over time and under different conditions. As de-conservation policies. As conditions change water users re-
+             scribed in the background section, many supply side and de-assess the situation and, if they choose to act, decide between
+             mand side factors affect water system reliability. However,available options such as investment in efﬁcient technology,
+             not all variables and processes are relevant for a given ques-changing water use behavior and, in extreme cases, reloca-
+             tion. A question driven modeling process uses the question totion. Therefore, per capita demand is a function of price and
+             determine model boundary and scope rather than beginning   historic water reliability as well as available technologies,
+             withapriorunderstandingoftheimportantvariablesandpro-      and water user’s perception of the water system. Since the
+             cesses. A question driven process is here used to determinefocus of the question is on system wide reliability individ-
+             the appropriate level of system abstraction for the Sunshineual level decisions can be modeled in the aggregate as to-
+             City reservoir operations model.                           tal demand, which is also inﬂuenced by population. Popu-
+               Fromthe research question it is clear that reliability is thelation increases in proportion to the current population, as
+             outcome metric of interest and that the model must test forregional economic growth is the predominant driver of mi-
+             the hypothesized link between demand changes and reliabil- gration trends. However, in extreme cases, perceptions of re-
+             ity. Reliability, as deﬁned above, is the percent of time that allsource limitations can also inﬂuence growth rates. The SES
+             demandscanbemet.TheSESframeworkisusedtoguidethe            variables used in the conceptual model are highlighted in Ta-
+             selection of processes and variables, including the dynamicble 3 and the resulting processes are summarized in Fig. 5.
+             hypothesis. Given this wide range, the framework was then    Only a subset of the variables and processes articulated in
+             comparedagainst the variables and processes found to be in-the SES framework are included in the conceptual model;
+             ﬂuential in urban water management and socio-hydrological  other variables and processes were considered but not in-
+             studies (Brezonik and Stadelmann, 2002; Abrishamchi et al.,cluded. For example, economic development drives increas-
+             2005; Padowski and Jawitz, 2012; Srinivasan et al., 2013;  ing per capita water demands in many developing regions
+             DawadiandAhmad,2013;Elshafeietal.,2014;Goberetal.,         but the relationship between economic growth and water de-
+             2014; Liu et al., 2014; Pande et al., 2013; van Emmerik et mands in highly developed regions is weaker due to the in-
+             al., 2014). Based on this evaluation two second tier variablescreased cost of supply expansion and greater pressure for
+             wereaddedtotheframework:landusetotheresourcesystem         environmental protection (Gleick, 2000). The income elas-
+             www.hydrol-earth-syst-sci.net/20/73/2016/                                  Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+            82                                        M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+            Table 3. SES framework, modiﬁed for urban water systems.
+                    First tier variables Second tier variables           Third tier variables (examples)
+                    Socio, economic      S1–Economicdevelopment          Per capita income
+                    and political settingsS2–Demographictrends           Rapid growth
+                                         S3–Political stability          Frequency of government turnover
+                                         S4–Othergovernancesystems       Related regulations
+                                         S5–Markets                      Regional water markets
+                                         S6–Mediaorganizations           Mediadiversity
+                                         S7–Technology                   Infrastructure, communications
+                                1
+                    Resource systems     RS1–Typeofwaterresource         Surface water, groundwater
+                                         RS2–Clarityofsystemboundaries   Groundwater–surface water interactions
+                                         RS3–Sizeofresourcesystem        Watershed or aquifer size
+                                         RS4–Human-constructedfacilities Type, capacity, condition
+                                         RS5–Catchmentlanduse            Urbanization, reforestation
+                                         RS6–Equilibriumproperties       Meanstreamﬂow,sustainable yield
+                                         RS7–Predictability of system dynamicsData availability, historic variability
+                                         RS8–Storagecharacteristics      Natural/built, volume
+                                         RS9–Location
+                    Governance systems2  GS1–Governmentorganizations     Public utilities, regulatory agencies
+                                         GS2–Nongovernmentorganizations  Advocacygroups, private utilities
+                                         GS3–Networkstructure            Hierarchy of organizations
+                                         GS4–Water-rights systems        Prior appropriation, beneﬁcial use
+                                         GS5–Operational-choice rules    Water use restrictions, operator protocol
+                                         GS6–Collective-choice rules     Deliberation rules, position rules
+                                         GS7–Constitutional-choice rules Boundary rules, scope rules
+                                         GS8–Monitoringandsanctioning rulesEnforcement responsibility
+                              3
+                    Resource units       RU1–Interbasin connectivity     Infrastructure, surface–groundwater interactions
+                                         RU2–Economicvalue               Water pricing, presence of markets
+                                         RU3–Quantity                    Volumeinstorage, current ﬂow rate
+                                         RU4–Distinctive characteristics Water quality, potential for public health impacts
+                                         RU5–SpatialandtemporaldistributionSeasonal cycles, interannual cycles
+                    Actors               A1–Numberofrelevantactors
+                                         A2–Socioeconomicattributes      Education level, income, ethnicity
+                                         A3–Historyorpastexperiences     Extreme events, government intervention
+                                         A4–Location
+                                         A5–Leadership/entrepreneurship  Presence of strong leadership
+                                         A6–Norms(trust-reciprocity)/social capitalTrust in local government
+                                         A7–Knowledge ofSES/mentalmodels Memory,mentalmodels
+                                         A8–Importanceofresource (dependence)Availability of alternative sources
+                                         A9–Technologiesavailable        Communication technologies, efﬁciency technologies
+                                         A10–Values                      Preservation of cultural practices
+                    Action situations:   I1 – Water supply               Withdrawal, transport, treatment, distribution
+                                      4
+                    interactions → outcomesI2 – Information sharing      Public meetings, word of mouth
+                                         I3 – Deliberation processes     Ballot initiatives, board votes, public meetings
+                                         I4 – Conﬂicts                   Resource allocation conﬂicts, payment conﬂicts
+                                         I5 – Investment activities      Infrastructure construction, conservation technology
+                                         I6 – Lobbying activities        Contacting representatives
+                                         I7 – Self-organizing activities Formation of NGOs
+                                         I8 – Networking activities      Online forums
+                                         I9 – Monitoring activities      Sampling, Inspections, self-policing
+                                         I10 – Water demand              Indoor/Outdoor, residential/commercial/industrial
+                                         O1–Socialperformancemeasures    Efﬁciency, equity, accountability
+                                         O2–Ecologicalperformance measuresSustainability, minimum ﬂows
+                                         O3–Externalities to other SESs  Ecosystem impacts
+                    Related ecosystems   ECO1–Climatepatterns            El Niño impacts, climate change projections
+                                         ECO2–Pollutionpatterns          Urban runoff, upstream discharges
+                                         ECO3–FlowsintoandoutoffocalSES  Upstream impacts, downstream rights
+                   Note: variables added are in italic, variables key to the conceptual model are in bold. Examples of third tier variables are given for clariﬁcation. 1 Resource system variables
+                   removed or replaced: productivity of system. 2 Governance system variables removed or replaced: property. 3 Resource unit variables removed or replaced: resource unit
+                   mobility, growth or replacement rate, interaction among resource units, number of units. 4 Interaction and outcome variables removed or replaced: harvesting.
+            Hydrol. Earth Syst. Sci., 20, 73–92, 2016                            www.hydrol-earth-syst-sci.net/20/73/2016/
+            M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process                                       83
+                                                              Reservoir
+                                  +                       -   storage                       +
+                        Reservoir storageWater supply                  +
+                           -                      Water demand         Water supply
+                                           -
+                                   -                  +         -         -     Populaion   +      Growth Rate
+                        Water            Water shortage
+                       demand                       Populaion         Water shortage
+                             -           +                 -           +
+                                 Shortage                     Shortage                     +
+                                 awareness                    awareness
+            Figure 5. Causal loop diagrams: (a) water demand, shortage and conservation; (b) water demand, shortage and population; (c) population
+            and growth rate.
+            Table 4. State and exogenous model variables.
+                                   VariableDescription           Units     Equation Variable Type
+                                   Q       Streamﬂow             km3yr−1   1        Exogenous
+                                   V       Reservoir storage volumekm3     2        State
+                                   P       Population            Persons   3        State
+                                   W       Withdrawal            km3yr−1   4        State
+                                   S       Shortage magnitude    km3yr−1   5        State
+                                   M       Shortage awareness              6        State
+                                                                  3  −1
+                                   D       Per capita demand     m yr      7        State
+            ticity of water can lead to increased water demands if ratescharacteristics may change over the 50-year timescale in re-
+            do not change proportionally (Dalhuisen et al., 2003); heresponse to watershed wide land use changes and global-scale
+            prices are assumed to keep pace with inﬂation. Given thisclimatic changes. Streamﬂow properties are ﬁrst considered
+            assumption, and the focus on a city in a developed region,stationary parametersinordertounderstandtheimpactofthe
+            economic development likely plays a minor role. Similarly,selected operating policy in isolation from land use and cli-
+            group decision-making and planning processes such as pub-mate change. Climate scenarios or feedbacks between popu-
+            lic forums, voting and elections can shape the responses tolation and land use can be introduced in future applications of
+            reliability changes over time. This model aims to answer athe model to test their impact on system performance. Reser-
+            question about the impact of a policy not the ease or like-voir operating policy, summarized as the hedging slope, KP,
+            lihood of its implementation. Once the policy is establishedis considered a parameter in the model. Alternate values of
+            through whatever process that is used, the question here fo-parameter K are tested but held constant during the study
+                                                                             P
+            cuses on its efﬁcacy. Therefore, group decision-making pro-period to understand the long-term impacts of selecting a
+            cesses need not be included.                           given policy. Reservoir properties such as capacity and slope
+              In addition to determining the appropriate level of detailare also held constant to hone in on the effect of operating
+            of the conceptual model, we must determine which variablespolicy. See Tables 4 and 5 for a summary of variable types.
+            changeinresponsetoforcesoutsidethemodelscope(exoge-    Fromthesemodelrelationships, general equations are devel-
+            nous variables), which variables must be modeled endoge-oped by drawing from established theory, empirical ﬁndings
+            nously (state variables) and which can be considered con-and working hypotheses.
+            stants (parameters). Again the nature of the question alongStreamﬂow, Q, is modeled using a ﬁrst-order autoregres-
+                                                                                                       3  −1
+            withthetemporalandspatialscaleinformsthesedistinctions.sive model, parameterized by mean (µ km yr), standard
+                                                                                 3  −1             H
+            Variables such as stored water volume, per capita water de-deviation (σH km yr) and lag one autocorrelation (ρH).
+            mand and shortage awareness will clearly change over theThe ﬁnal term, a , is a normally distributed random variable
+                                                                                 t
+            50-year study period. The population of the city is also ex-with a mean zero and a standard deviation of 1.
+            pected to change over the study period. Under average hy-Q =ρ (Q    −µ )+σ 1−p20.5a +µ               (1)
+            drological conditions the population growth rate is expectedtH   t−1   H     H      H    t    H
+            to be driven predominately by regional economic forces ex-Ateachtimesteptheamountofwaterinstorage,V,inthe
+            ogenous to the system; however, under extreme conditionsreservoir is speciﬁed by a water balance equation, where W
+            water supply reliability can inﬂuence the growth rate. There-              3          −1
+                                                                   is water withdrawal (km ), η(kmyr )isevaporation,Ais
+            fore, population is considered a state variable. Streamﬂow    2        3      H                        3
+                                                                   area (km ), Q (km )isdownstreamdemandandQ (km )
+                                                                              D                               E
+            www.hydrol-earth-syst-sci.net/20/73/2016/                            Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+            84                                       M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+            Table 5. Model parameters.
+                            ParametersDescription                    Value     Units          Equation
+                                                                              3  −1
+                            µH        Meanstreamﬂow                    2.0  km yr                  1
+                                                                              3  −1
+                            σH        Standard deviation of streamﬂow  0.5  km yr                  1
+                            ρH        Streamﬂowlagoneautocorrelation   0.6        –                1
+                                                                                 −1
+                            η         Evaporation rate               0.001   kmyr                  2
+                             H                                                    3
+                            Q         Downstreamallocation          0.50Q       km                 2
+                             D                                                    3
+                            Q         Required environmental ﬂow    0.25Q       km                 2
+                             E
+                            σT        Average slope of reservoir       0.1        –  Stage–storage curve
+                                                                                 −1
+                            δ         Regional birth rate             0.04     yr                  3
+                            I                                                    −1
+                            δ         Regional death rate             0.03     yr                  3
+                            E                                                    −1
+                            δ         Regional immigration rate       0.05     yr                  3
+                            I                                                    −1
+                            δ         Regional emigration rate        0.03     yr                  3
+                            E
+                            τP        Threshold                        0.4        –                3
+                            V         Reservoir capacity               2.0      km3                4
+                             max
+                            KP        Hedging slope                Variable       –                5
+                            µS        Awareness loss rate             0.05     yr−1                6
+                            αD        Fractional efﬁciency adoption rate0.15      –                7
+                            βD        Background efﬁciency rate     0.0001        –                7
+                                                                              3  −1
+                            D         Minimumwaterdemand              200    m yr                  7
+                             MIN
+            is the required environmental ﬂow.                    ﬁcation links the damping effect to perceived shortage risk.
+                                                                  dP    P [δ −δ +δ −δ ]
+                                                                     =    t [ B D   I  E           ]              (3)
+                                                                         P δ −δ +δ(1−M)−δ (M) forM ≥τ
+            dV =Q −W −η A −Q −Q                             (2)    dt     t ( B  D)  I     t   E  t       t  P
+             dt    t    t   H t     D    E                          Water withdrawals, W, are determined by the reservoir
+                                                                  operating policy in use. As there is only one source, water
+              Population is the predominant driver of demand in thewithdrawn is equivalent to the quantity supplied. The pre-
+            model. Population (P) changes according to average birthdicted streamﬂow for the coming year is 0.25×Qt−1, ac-
+            (δB, yr−1), death (δD, yr−1), emigration (δE, yr−1) and immi-counting for both downstream demands and environmental
+            gration (δ , yr−1) rates. However, immigration is dampenedﬂowrequirements.UnderSOP,K isequaltoonewhichsets
+                    I                                                                         P
+            andemigrationacceleratedbyhighvaluesofperceivedshort- withdrawals equal to total demand, DP (per capita demand
+            age risk, as would be expected at extreme levels of resourcemultiplied by population), unless the stored water is insuf-
+            uncertainty (Sterman, 2000). The logistic growth equation,ﬁcient to meet demands. Under HP, withdrawals are slowly
+            which simulates the slowing of growth as the resource car-decreased once a pre-determined threshold, K DP, has been
+                                                                                                        P
+            rying capacity of the system is approached, serves as the ba-passed. For both policies excess water is spilled when stored
+            sis for the population function. While the logistic functionwater exceeds capacity, V.
+                                                                                       max
+            is commonly used to model resource-constrained populationW =                                          (4)
+            growth, the direct application of this function would be in-t
+                                                                     V +0.25Q    −V      for V +0.25Q    ≥
+            appropriate for two reasons. First, an urban water system is t   t−1   max       t       t−1
+                                                                  
+                                                                                            DtPt +Vmax
+            an open system; resources are imported into the system at a
+                                                                   DP                   for DP +V     >
+            cost and people enter and exit the system in response to re-tt                    t t   max
+                                                                                             V +0.25Q    ≥K DP
+                                                                                             t       t−1    P t t
+                                                                  
+            ductions in reliability and other motivating factors. Second, V +0.25Q
+                                                                   t         t−1
+                                                                                        for K DP >V +0.25Q
+            individuals making migration decisions may not be aware       KP                  P  t t   t       t−1
+            of incremental changes in water shortage risk; rather, per-When the water withdrawal is less than the quantity de-
+            ceptions of water stress drive the damping effect on net mi-mandedbytheusers, a shortage, S, occurs.
+            gration. Finally, only at high levels does shortage perception
+            inﬂuence population dynamics. To capture the effect of the D P −W      for D P >W
+                                                                  S =     t t    t      t t    t                  (5)
+            opensystem,logisticdampingisappliedonlytoimmigration   t     0          otherwise
+            driven population changes when shortage perception crosses
+            a threshold, τP. To account for the perception impact, theDi Baldassarre et al. (2013) observed that in ﬂood plain
+            shortage awareness variable, M, is used in place of the ratiodynamics awareness of ﬂood risk peaks after a ﬂood event.
+            of population to carrying capacity typically used; this modi-This model extends that observation to link water shortage
+            Hydrol. Earth Syst. Sci., 20, 73–92, 2016                          www.hydrol-earth-syst-sci.net/20/73/2016/
+         M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process            85
+         events to the awareness of shortage risk. The ﬁrst term inis removed as it no longer drives population and demand
+         the equation is the shortage impact which is a convex func-changes. Instead the model assumes that population growth
+         tion of the shortage volume. The economic utility of hedgingis constant at 3% and that per capita demands decrease by
+         hingesontheassumptionthattheleastcostlyoptionstoman-0.5% annually. While these assumptions may be unrealis-
+         age demand will be undertaken ﬁrst. As both water utilitiestic they are not uncommon. Utility water management plans
+         and water users have a variety of demand management andtypically present one population and one demand projection.
+         conservation options available and both tend to use optionsReservoir storage, water withdrawals and shortages are com-
+         from most to least cost-effective, a convex shortage loss isputed according to the equations described above. A full list
+         also applicable to the water users (Draper and Lund, 2004). Itof model variables and parameters can be found in Tables 4
+         is here assumed that the contribution of an event to shortageand 5, respectively.
+         awareness is proportional to the shortage cost. At high levels
+         of perceived shortage risk only a large shortage will lead to3.3Results
+         a signiﬁcant increase in perceived risk. The adaptation cost
+         is multiplied by one minus the current shortage awareness toThemodelwasrunforSOP(KP=1)andthreelevelsofHP
+         account for this effect. The second term in the equation in-where level one (K =1.5) is the least conservative, level
+                                  −1                          P
+         corporates the decay of shortage, µS (yr), awareness andtwo (KP =2) is slightly more conservative and level three
+         its relevance to decision making that occurs over time (Di(K =3)isthemostconservative hedging rule tested. Three
+                                                   P
+         Baldassarre et al., 2013).               trials were conducted with a constant parameter set to under-
+         dM    S 2                              stand the system variation driven by the stochastic stream-
+            =    t   1−M −µ M                (6)  ﬂow sequence and to test if the relationship hypothesized
+          dt   DP (      t )S  t                  wasinﬂuential across hydrological conditions. For each trial
+                t t
+           Historically, in developed regions per capita water de-streamﬂow, reservoir storage, shortage awareness, per capita
+         mandshavedecreasedovertimeastechnologyimprovedanddemand, population and total demand were recorded and
+         aswaterusepracticeshavechanged.Asdescribedabove,thisplotted. As a comparison, each trial was also run in the non-
+         decrease is not constant but rather is accelerated by shocks tocoupled model in which demand and population changes are
+         the system. To capture this effect there are two portions toexogenous.
+         the demand change equation: shock-stimulated logistic de-In the ﬁrst trial, shown in Fig. 6a, there were two sus-
+         cay with a maximum rate of α (yr−1) and a background de-tained droughts in the study period: from years 5 to 11 and
+         cayrate, β (yr−1). Per capita water demand decrease acceler-then from years 33 to 37. Higher than average ﬂows in the
+         ates in a time interval if water users are motivated by recentyears preceding the ﬁrst drought allowed the utility to build
+         personal experience with water shortage (i.e., M>0). As aupstoredwaterasseeninFig.6b.Thestorageactsasabuffer
+         certain amount of water is required for basic health and hy-and the impacts are not passed along to the water users until
+         giene, there is ultimately a ﬂoor to water efﬁciencies, speci-year 18 under SOP. Under HP the impacts, as well as wa-
+                      3  −1                       ter users’ shortage awareness, increase in years 15, 13 and
+         ﬁed here as D(km yr). Reductions in per capita water
+                  min                             12 based on the level of the hedging rule (slope of K ) ap-
+         usagebecomemorechallengingasthisﬂoorisapproached;a                        P
+         logistic decay function is used to capture this effect. When noplied, as shown in Fig. 6c. The impact of this rising shortage
+         recent shortages have occurred (i.e., M = 0), there is still aawareness on per capita water demands is seen in the accel-
+         slow decrease in per capita water demands. This backgrounderation of the decline in demands in Fig. 6d. This demand
+         rate, β, of demand decrease is driven by both the replacementdecrease is driven by city level policy changes such as price
+         of obsolete ﬁxtures with modern water efﬁcient ﬁxtures andincreases and voluntary restrictions in combination with in-
+         the addition of new more efﬁcient building stock. This back-creased willingness to conserve.
+         ground rate is similarly slowed as the limit is approached;Theimpactsofthisdecreaseonindividualwateruserswill
+         this effect is incorporated by using a percentage-based back-dependontheirsocio-economiccharacteristics as well as the
+         ground rate. Note that price is not explicitly included in thisparticular policies implemented. While the aggregation hides
+         formulation of demand. As stated above, because price andthis heterogeneity, it should be considered in the interpreta-
+         nonprice measures are often implemented in concert it is dif-tion of these results. The increased shortage awareness also
+         ﬁcult to separate the impacts of these two approaches and inhas a small dampening effect on population growth during
+         this case unnecessary.                   and directly after the ﬁrst drought (Fig. 6e). Changes to both
+                                                  per capita demands and population result in total demand
+         dD           D                       changes (see Fig. 6f). After the ﬁrst drought the system be-
+            =−D Mα 1− min +β                 (7)
+          dt    t  t     D                        gins to recover under each of the three hedging policies as
+                          t                       evidenced by the slow increase in reservoir storage. How-
+           As a comparison, a noncoupled model was developed. Inever, as streamﬂows ﬂuctuate around average streamﬂow and
+         this model, population and demand changes are no longertotal demands now surpass the average allocation, reservoir
+         modeled endogenously. The shortage awareness variablestorage does not recover when no hedging restrictions are
+         www.hydrol-earth-syst-sci.net/20/73/2016/          Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+        86                        M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+        Figure 6. Model results, trial 1: (a) annual streamﬂow, (b) reser-Figure 7. Model results, trial 2: (a) annual streamﬂow, (b) reser-
+        voir storage volume, (c) public shortage awareness, (d) per capitavoir storage volume, (c) public shortage awareness, (d) per capita
+        demand, (e) annual city population, (f) total demand.demand, (e) annual city population, (f) total demand.
+        imposed. Several years of above average ﬂow ending in yearIn the third and ﬁnal trial there is no signiﬁcant low ﬂow
+        29drive further recovery. The second prolonged drought hasperiod until year 36 of the simulation when a moderate
+        the most pronounced effect under the SOP scenario. Short-drought event occurs, as shown in Fig. 8a. Earlier in the
+        age impacts are drastic, driving further per capita demandsimulation minor ﬂuctuations in streamﬂow only trigger an
+        decreases and a temporary decline in population. A slightacceleration of per capita demand declines under the level
+        population decrease is also seen under level one hedging butthree HP, as seen in Fig. 8c and d. A moderate drought begins
+        theresultsdemonstratethatallhedgingstrategiesdampenthein year 36. However, the reservoir levels drop and shortage
+        effect.                           awareness rise starting before year 20, as seen in Fig. 8b and
+         In the second trial there are two brief droughts in the be-c. Then when the drought occurs the impacts are far greater
+        ginning of the study period, beginning in years 4 and 10, asthan in the comparably moderate drought in trial 1 because a
+        seen in Fig. 7a. Under SOP and the ﬁrst two hedging policiesprolonged period of steady water supply enabled population
+        there is no change in operation for the ﬁrst drought and thegrowth and placed little pressure on the population to reduce
+        reservoir is drawn down to compensate as seen in Fig. 7a–b.demands.IntheSOPscenario,thesystemwasinshortagebe-
+        Only under the level three HP are supplies restricted, trig-fore the drought occurred and total demands peaked in year
+        gering an increase in shortage awareness and a subsequent30 at 0.82km3. The subsequent drought exacerbated an ex-
+        decrease in per capita demands, as found in Fig. 7c and d.isting problem and accelerated changes already in motion.
+        Whentheprolonged drought begins in year 20, the four sce-Figure 9 presents results of the noncoupled model simula-
+        narios have very different starting points. Under SOP, theretion. While the control model was also run for all three trials,
+                  3
+        is less than 0.5km of water in storage and total annual de-the results of only trial three are included here for brevity.
+        mands are approximately 0.65km3. In contrast, under theIn the noncoupled model, HP decreases water withdrawals
+        level three HP there is 1.4km3 of water in storage and to-as reservoir levels drop and small shortages are seen early
+                              3
+        tal annual demands are just under 0.6km . Predictably, thein the study period, as seen in Fig. 9b and c. In the second
+        impacts of the drought are both delayed and softened underhalf of the study period signiﬁcant shortages are observed, as
+        HP. As the drought is quite severe, all scenarios result in ain Fig. 9c. However, inspection of the streamﬂow sequence
+        contraction of population. However, the rate of decrease andreveals no severe low ﬂow periods indicating that the short-
+        total population decrease is lowered by the use of HP.ages are driven by increasing demands, as in Fig. 9a. As ex-
+        Hydrol. Earth Syst. Sci., 20, 73–92, 2016  www.hydrol-earth-syst-sci.net/20/73/2016/
+       M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process87
+       Figure 8. Model results, trial 3: (a) annual streamﬂow, (b) reser-Figure 9. Noncoupled model results, trial 3: (a) annual stream-
+       voir storage volume, (c) public shortage awareness, (d) per capitaﬂow, (b) reservoir storage volume, (c) shortage volume (demand–
+       demand, (e) annual city population, (f) total demand.supply), (d) per capita demand, (e) annual city population, (f) total
+                                    demand.
+       pected, changes to per capita demands, population, and total
+       demandsaregradualandconsistentacrosstheoperatingpol-lationships and the variables excluded during the manuscript
+       icy scenarios, found in Fig. 9e and f.reviewprocessindicatethatsometransparencywasachieved.
+                                    However, the reader is in the best position to judge success
+                                    onthis third aim.
+       4Discussion                   A socio-hydrological model of the Sunshine City water
+                                    system was developed using the question driven modeling
+       The proposed question driven modeling process has threeprocess and compared to a noncoupled model. The noncou-
+       aims: to broaden the researcher’s view of the system, topled model included assumes that both population growth
+       connect modeling assumptions to the model’s purpose andand per capita demand change can be considered exogenous
+       to increase the transparency of these assumptions. A socio-to the system. Both models show, as prior studies demon-
+       hydrological model was developed to examine the differ-strated, that by making small reductions early on HP re-
+       ence in long-term reliability between two reservoir operatingducesthechanceofsevereshortages.Thesocio-hydrological
+       policies, SOP and HP. This question focused the conceptualmodel also demonstrates that in the HP scenarios the mod-
+       model on processes inﬂuencing reliability at the city scaleerate low ﬂow events trigger an acceleration of per capita
+       over the 50-year planning period. As part of the conceptualdemand decrease that shifts the trajectory of water demands
+       model development, the SES framework was used to checkand in some instances slows the rate of population growth.
+       framing assumptions. The wide range of candidate variablesIn contrast, SOP delays impacts to the water consumers and
+       included in the SES framework was reviewed against casetherefore delays the shift to lower per capita demands. When
+       data and background information. The model’s intended useextremeshortageevents,suchasadeeporprolongeddrought
+       then informed decisions of which processes to include in theoccur, the impacts to the system are far more abrupt in the
+       model, which processes were endogenous to the system andSOPscenariobecausepercapitademandsandpopulationare
+       whichvariables could be held constant. The point here is nothigherthaninhedgingscenariosandthereislessstoredwater
+       that the logic presented by the modeler using this processavailable to act as a buffer. When we compare SOP and HP
+       is unfailing but that it is clear and can inform debate. Theusing a socio-hydrological model we see that HP decreases
+       questions raised about both the functional form of model re-the magnitude of the oscillations in demand and population.
+       www.hydrol-earth-syst-sci.net/20/73/2016/Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+      88                  M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+      Hedgingreducesthethresholdforaction, thereby decreasingtaining a given policy and the conditions in which policy
+      the delay and the oscillation effect. This distinction betweenchange would be beneﬁcial. Despite these drawbacks a sim-
+      the two policies was not apparent when using a traditionalple hypothetical model is justiﬁed here to clearly illustrate
+      noncoupled model. The signiﬁcance of this observation isthe proposed modeling process.
+      that a decrease in oscillation means a decrease in the mag-There are several limitations to the hypothetical case of
+      nitude of the contractions in population and per capita waterSunshine City. First, the hypothetical nature of the case pre-
+      demandsrequired to maintain sustainability of the system. Itcludes hypothesis testing. Therefore, an important extension
+      is these abrupt changes in water usage and population thatof this work will be to apply the modeling process pre-
+      water utilities and cities truly want to avoid as they wouldsented here on a real case to fully test the resulting model
+      hampereconomicgrowthanddecreasequality of life.against historical observations before generating projections.
+       Examining the structure of the system can explain the dif-Second, only one set of parameters and functions was pre-
+      ferencesinsystemresponsetoSOPandHP.AsseeninFig.5,sented. Future extensions to this work on reservoir policy
+      there are one positive and two negative feedback loops in theselection will test the impact of parameter and function se-
+      system. Positive feedback loops, such as population in thislection through sensitivity analysis. Finally, we gain limited
+      model,exhibit exponential growth behavior but there are fewunderstandingofthepotentialofthemodeldevelopmentpro-
+      truly exponential growth systems in nature and through in-cess by addressing only one research question. We can fur-
+      teraction with other feedback loops most systems ultimatelyther test the ability of the modeling process to generate new
+      reach a limit (Sterman, 2000). Negative feedback loops gen-insights by developing different models in response to dif-
+      erate goal seeking behavior. In its simplest form a negativeferent questions. In this case, the narrow scope of the driv-
+      feedback loop produces a slow approach to a limit or goaling question leads to a model that just scratches the surface
+      akin to an exponential decay function. In this case, the goalof socio-hydrological modeling as evidenced by the narrow
+      of the system is to match total demand with average sup-rangeofsocietalvariablesandprocessesincluded.Forexam-
+      ply. The fact that supply is driven by streamﬂow, a stochasticple, this model does not address the ability of the water utility
+      variable, adds noise to the system. Even if streamﬂow is cor-or city to adopt or implement HP. HP impacts water users in
+      rectly characterized with stationary statistics, as is assumedthe short term. These impacts would likely generate a mix
+      here, the variability challenges the management of the sys-of reactions from water users and stakeholders making it im-
+      tem. Reservoir storage helps utilities manage this variabilitypossible to ignore politics when considering the feasibility of
+      by providing a buffer but it also acts as a delay. The delayHP. However, the question driving this model asks about the
+      between a change in the state of the system and action takenimpact of a policy choice on the long-term reliability of the
+      in response allows the system to overshoot its goal value be-system not the feasibility of its implementation. A hypothe-
+      fore corrective action is taken, leading to oscillation aroundsis addressing the feasibility of implementation would lead
+      goal values. While water storage decreases the impact of ato a very different model structure.
+      drought, changes to water consumption patterns are requiredWhilethereis signiﬁcant room for improvement, there are
+      to address demand driven shortages. Water storage simulta-inherent limitations to any approach that models human be-
+      neously buffers variability and delays water user response byhavior. The human capacity to exercise free will, to think
+      delaying impact. There are parallels between the feedbackcreatively and to innovate means that human actions, particu-
+      identiﬁed in this urban water supply system and the feedbacklarly under conditions not previously experienced, are funda-
+      identiﬁed by Elshafei et al. (2014) and Di Baldassarre (2013)mentally unpredictable. Furthermore, as stated above we can
+      in agricultural water management and human–ﬂood interac-never fully capture the complexity of the socio-hydrological
+      tions, respectively. Broadly, the three systems display the bal-system in a model. Instead we propose a modeling process
+      ancebetweentheinteractionbetweenopposingforces,inthisthat focuses socio-hydrological model conceptualization on
+      case articulated as positive and negative feedback loops.answering questions and solving problems. By using model
+       The case of Sunshine City is simpliﬁed and perhaps sim-purpose to drive our modeling decisions we provide justi-
+      plistic. The limited number of available options for actionﬁcation for simplifying assumptions and a basis for model
+      constrains the system and shapes the observed behavior. Inevaluation.
+      many cases water utilities have a portfolio of supply, stor-
+      age and demand management policies to minimize short-
+      ages. Additionally, operating policies often shift in response5Conclusions
+      to changing conditions. However, in this case no supply side
+      projects are considered and the reservoir operating policy isHuman and water systems are coupled. The feedback be-
+      assumed constant throughout the duration of the study pe-tween these two subsystems can be, but are not always,
+      riod. As there are physical and legal limits to available sup-strong and fast enough to warrant consideration in water
+      plies the ﬁrst constraint reﬂects the reality of some systems.planning and management. Traditional, noncoupled, model-
+      Constant operational policy is a less realistic constraint buting techniques assume that there is no signiﬁcant feedback
+      can offer new insights by illustrating the limitations of main-between human and hydrological systems. They therefore
+      Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/
+       M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process89
+       offer no insights into how changes in one part of the sys-References
+       tem may affect another. Dynamic socio-hydrological model-Abrishamchi, A. and Tajrishi, M.: Inter-basin water transfer in Iran,
+       ing recognizes and aims to understand the potential for feed-in: Water Conservation, Reuse, and Recycling, Proceeding of
+       backsbetweenhumanandhydrologicalsystems.Bybuildingan Iranian American workshop, The National Academies Press,
+       human dynamics into a systems model, socio-hydrologicalWashington, DC, 252–271, 2005.
+       modeling enables testing of hypothesized feedback cyclesArocha, J. F., Patel, V. L., and Patel, Y. C.: Hypothesis generation
+       and can illuminate the way changes propagate through theandthecoordination of theory and evidence in novice diagnostic
+       coupled system.               reasoning, Med. Decis. Making, 13, 198–211, 1993.
+        Recent work examining a range of socio-hydrologicalBaldassare, M. and Katz, C.: The personal threat of environmental
+       systems demonstrates the potential of this approach. How-problems as predictor of environmental practices, Environ. Be-
+       ever, there are signiﬁcant challenges to modeling socio-hav., 24, 602–616, 1992.
+       hydrological systems. First, there are no widely acceptedBBC Research: Public Opinions, Attitudes, and Awareness
+       laws of human systems as there are for physical or chemicalRegarding Water in Colorado, Final Report Prepared for
+       systems. Second, common disciplinary assumptions must bethe Colorado Water Conservation Board, available at: http:
+       questioned due to the integrative nature of socio-hydrology.//www.bbcresearch.com/images/Final_Report_072213_web.pdf
+       Transparencyofthemodeldevelopmentprocessandassump-(last access: 1 July 2015), 2013.
+       tions can facilitate the replication and critique needed toBeven, K.: Towards a coherent philosophy for modelling
+       move this young ﬁeld forward. We assess the progress andtheenvironment,P.Roy.Soc.A,458,2465–2484,
+       gaps in socio-hydrological modeling and draw lessons fromdoi:10.1098/rspa.2002.0986, 2002.
+       adjacent ﬁelds of study, hydrology, social-ecological systemsBlair, P. and Buytaert, W.: Modelling socio-hydrological systems: a
+       science and system dynamics, to inform a question drivenreview of concepts, approaches and applications, Hydrol. Earth
+                                     Syst. Sci. Discuss., 12, 8761–8851, doi:10.5194/hessd-12-8761-
+       model development process. We then illustrate this process2015, 2015.
+       by applying it to the hypothetical case of a growing city ex-Blöschl, G. and Sivapalan, M.: Scale issues in hydrolog-
+       ploring two alternate reservoir operation rules.icalmodelling: a review, Hydrol. Process., 9, 251–290,
+        By revisiting the classic question of reservoir operationdoi:10.1002/hyp.3360090305, 1995.
+       policy, we demonstrate the utility of a socio-hydrologicalBower, B. T., Hufschmidt, M. M., and Reedy, W. W.: Operating
+       modeling process in generating new insights into the im-procedures: their role in the design of water-resources systems
+       pacts of management practices over decades. This socio-by simulation analyses, in: Design of Water-Resource Systems,
+       hydrological model shows that HP offers an advantage notHarvard Univ. Press, Cambridge, MA, 443–458, 1962.
+       detected by traditional simulation models: it decreases theBrezonik,P.L.andStadelmann,T.H.:Analysisandpredictivemod-
+       magnitude of the oscillation effect inherent in goal seekingels of stormwater runoff volumes, loads, and pollutant concen-
+       systems with delays. Through this example we identify onetrations from watersheds in the Twin Cities metropolitan area,
+                                     Minnesota, USA, Water Res., 36, 1743–1757, 2002.
+       class of question, the impact of reservoir management policyCampbell,H.E.,Johnson,R.M.,andLarson,E.H.:Prices,devices,
+       selection over several decades, for which socio-hydrologicalpeople, or rules: the relative effectiveness of policy instruments
+       modeling offers advantages over traditional modeling. Thein water conservation, Rev. Policy Res., 21, 637–662, 2004.
+       model developed, and the resulting insights, are contingentCancelliere, A., Ancarani, A., and Rossi, G.: Susceptibility of water
+       uponthequestioncontext.Thedynamicsidentiﬁedheremaysupply reservoirs to drought conditions, J. Hydrol. Eng., 3, 140–
+       be more broadly applicable but this is for future cases and148, 1998.
+       models to assess.            Chong,H.andSunding,D.:Watermarketsand
+                                     trading,Annu.Rev.Env.Resour.,31,239–264,
+                                     doi:10.1146/annurev.energy.31.020105.100323, 2006.
+       TheSupplementrelatedtothisarticle is available onlineCrow,D.A.:PolicyEntrepreneurs,Issue Experts, and Water Rights
+       at doi:10.5194/hess-20-73-2016-supplement.Policy Change in Colorado, Rev. Policy Research, 27, 299–315,
+                                     doi:10.1111/j.1541-1338.2010.00443.x, 2010.
+                                    Dalhuisen, J. M., Florax, R. J. G. M., de Groot, H. L. F.,
+                                     and Nijkamp, P.: Price and Income Elasticities of Residential
+                                     Water Demand: A Meta-Analysis, Land Econ., 79, 292–308,
+       Acknowledgements. We would like to thank Brian Fath, Wei Liu,doi:10.2307/3146872, 2003.
+       and Arnold Vedlitz for reviewing an early version of this paper. WeDawadi, S. and Ahmad, S.: Evaluating the impact of demand-side
+       would also like to thank the two reviewers for their careful readingmanagement on water resources under changing climatic condi-
+       and thoughtful comments. Financial support for this researchtions and increasing population, J. Environ. Manage., 114, 261–
+       comesfromtheNSFWaterDiplomacyIGERTgrant(0966093).75, doi:10.1016/j.jenvman.2012.10.015, 2013.
+                                    Denver Water: Long-range Planning, available at: http://www.
+       Edited by: M. Sivapalan       denverwater.org/SupplyPlanning/Planning/, last access: 1 July,
+                                     2015.
+                                    Di Baldassarre, G., Viglione, A., Carr, G., Kuil, L., Salinas, J.
+                                     L., and Blöschl, G.: Socio-hydrology: conceptualising human-
+       www.hydrol-earth-syst-sci.net/20/73/2016/Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+       90                    M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+        ﬂood interactions, Hydrol. Earth Syst. Sci., 17, 3295–3303,study socio-hydro-ecological systems, Earth’s Future, 110–132,
+        doi:10.5194/hess-17-3295-2013, 2013.doi:10.1002/2014EF000295, 2015.
+       Di Baldassarre, G., Viglione, A., Carr, G., Kuil, L., Yan,Hinkel, J., Schleuter, M., and Cox, M.: A diagnostic procedure
+        K., Brandimarte, L., and Blöschl, G.: Debates–Perspectivesfor applying the social–ecological systems framework in diverse
+        on socio-hydrology: Capturing feedbacks between physicalcases, Ecol. Soc., 20, 32, doi:10.5751/ES-07023-200132, 2015.
+        and social processes, Water Resour. Res., 51, WR016416,Hughes, S., Pincetl, S., and Boone, C.: Triple exposure: reg-
+        doi:10.1002/2014WR016416, 2015.ulatory, climatic, and political drivers of water management
+       Draper, A. J. and Lund, J. R.: Optimal hedging and carryover stor-changes in the city of Los Angeles, Cities, 32, 51–59,
+        age value, J. Water Res. Pl.-ASCE, 130, 83–87, 2004.doi:10.1016/j.cities.2013.02.007, 2013.
+       Elshafei, Y., Sivapalan, M., Tonts, M., and Hipsey, M. R.: A pro-Inman, D. and Jeffrey, P.: A review of residential water conserva-
+        totype framework for models of socio-hydrology: identiﬁca-tion tool performance and inﬂuences on implementation effec-
+        tion of key feedback loops and parameterisation approach, Hy-tiveness, Urban Water J., 3, 127–143, 2006.
+        drol. Earth Syst. Sci., 18, 2141–2166, doi:10.5194/hess-18-2141-ISTPP: National Public Water Survey, Institute for Science, Tech-
+        2014, 2014.                  nology and Public Policy, Bush School of Government and Pub-
+       Elshafei, Y., Coletti, J. Z., Sivapalan, M., and Hipsey, M. R.:lic Service, Texas A&M University, College Station, TX, 2013.
+        A model of the socio-hydrologic dynamics in a semiaridJones, B. D. and Baumgartner, F. R.: The Politics of Attention, Uni-
+        catchment:Isolatingfeedbacksinthecoupledhuman-versity of Chicago Press, Chicago, IL, 2005.
+        hydrologysystem,Water Resour. Res., 6, WR017048,Jones, A., Seville, D., and Meadows, D.: Resource sustainability in
+        doi:10.1002/2015WR017048, 2015.commoditysystems:thesawmillindustryintheNorthernForest,
+       Falkenmark, M.: Water and mankind – complex system of mutualSyst. Dynam. Rev., 18, 171–204, doi:10.1002/sdr.238, 2002.
+        interaction, Ambio, 6, 3–9, 1977.Kandasamy, J., Sounthararajah, D., Sivabalan, P., Chanan, A., Vi-
+       Fielding, K. S., Russell, S., Spinks, A., and Mankad, A.: Determi-gneswaran, S., and Sivapalan, M.: Socio-hydrologic drivers of
+        nants of household water conservation: the role of demographic,the pendulum swing between agricultural development and en-
+        infrastructure, behavior, and psychosocial variables, Water Re-vironmental health: a case study from Murrumbidgee River
+        sour. Res., 48, W10510, doi:10.1029/2012WR012398, 2012.basin, Australia, Hydrol. Earth Syst. Sci., 18, 1027–1041,
+       Forrester, J. W.: Policies, decisions, and information sources fordoi:10.5194/hess-18-1027-2014, 2014.
+        modeling, Eur. J. Oper. Res., 59, 42–63, 1992.Kanta, L. and Zechman, E.: Complex adaptive systems framework
+       Frick, J., Kaiser, F. G., and Wilson, M.: Environmental knowledgeto assess supply-side and demand-side management for urban
+        and conservation behavior: exploring prevalence and structurewater resources, J. Water Res. Pl.-ASCE, 140, 75–85, 2014.
+        in a representative sample, Pers. Indiv. Differ., 37, 1597–1613,Kenney, D. S., Goemans, C., Klein, R., Lowrey, J., and Reidy, K.:
+        2004.                        Residential water demand management: Lessons from Aurora,
+       Gal, S.: Optimal management of a multireservoir water supply sys-Colorado, J. Am. Water Resour. As., 44, 192–207, 2008.
+        tem, Water. Resour. Res., 15, 737–749, 1979.Kuhn,T.S.:TheStructure of Scientiﬁc Revolutions, 3rd Edn., Uni-
+       Geller, E. S., Erickson, J. B., and Buttram, B. A.: Attempts to pro-versity of Chicago Press, Chicago, 1996.
+        moteresidential water conservation with educational, behavioralLADWP – Los Angeles Department of Water and Power: Urban
+        and engineering strategies, Popul. Environ., 6, 96–112, 1983.Water Management Plan 2010, Los Angeles, CA, 2010.
+       Giacomoni, M. H., Kanta, L., and Zechman, E. M.: Complex adap-Lélé,S.andNorgaard,R.B.:PracticingInterdisci-
+        tive systems approach to simulate the sustainability of water re-plinarity,BioScience,55,967-975,doi:10.1641/0006-
+        sources and urbanization, J. Am. Water Resour. Assoc., 139,3568(2005)055[0967:PI]2.0.CO;2, 2005.
+        554–564, 2013.              Liu, Y., Tian, F., Hu, H., and Sivapalan, M.: Socio-hydrologic
+       Gleick,P.H.:A Look at Twenty-ﬁrst Century Wa-perspectives of the co-evolution of humans and water in the
+        terResourcesDevelopment,WaterInt.,25,127–138,Tarim River basin, Western China: the Taiji-Tire model, Hy-
+        doi:10.1080/02508060008686804, 2000.drol. Earth Syst. Sci., 18, 1289–1303, doi:10.5194/hess-18-1289-
+       Gober, P. and Wheater, H. S.: Debates–Perspectives on socio-2014, 2014.
+        hydrology: Modeling ﬂood risk as a public policy problem, Wa-Loucks, D. P.: Debates–Perspectives on socio-hydrology: Simu-
+        ter Resour. Res., 51, WR016945, doi:10.1002/2015WR016945,lating hydrologic-human interactions, Water Resour. Res., 51,
+        2015.                        WR017002,10.1002/2015WR017002,2015.
+       Gober, P., White, D. D., Quay, R., Sampson, D. A., and Kirkwood,Mankad, A. and Tapsuwan, S.: Review of socio-economic
+        C. W.: Socio-hydrology modelling for an uncertain future, withdrivers of community acceptance and adoption of decen-
+        examplesfromtheUSAandCanada,Geol.Soc.Spec.Publ.,408,tralised water systems, J. Environ. Manage., 92, 380–91,
+        SP408-2, 2014.               doi:10.1016/j.jenvman.2010.10.037, 2011.
+       Hashimoto, T., Stedinger, J. R., and Loucks, D. P.: Reliability, re-McConnell,W.J.,Millington,J.D.A.,Reo,N.J.,Alberti,M.,Asb-
+                                                   ´
+        siliency, and vulnerability criteria for water resource system eval-jornsen, H., Baker, L. A., Brozovic, N., Drinkwater, L. E., Scott,
+        uation, Water Resour. Res., 18, 14–20, 1982.A., Fragoso, J., Holland, D. S., Jantz, C. A., Kohler, T. A., Her-
+       Hale, R. L., Armstrong, A., Baker, M. A., Bedingﬁeld, S.,bert, D., Maschner, G., Monticino, M., Podestá, G., Pontius, R.
+        Betts, D., Buahin, C., Buchert, M., Crowl, T., Dupont, R. R.,G., Redman,C.L.,Sailor,D.,Urquhart,G.,andLiu,J.:Research
+        Ehleringer, J.R, Endter-Wada, J., Flint, C., Grant, J., Hinners, S.,on Coupled Human and Natural Systems (CHANS): Approach,
+        Jeffery, S., Jackson-Smith, D., Jones, A. S., Licon, C., andChallenges, and Strategies, B. Ecol. Soc. Am., Meeting Reports,
+        Null, S. E.: iSAW: integrating structure, actors, and water to218–228, 2009.
+       Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/
+       M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process91
+       McGinnis, M.: Networks of adjacent action situations in polycen-Sivapalan, M. and Blöschl, G.: Time scale interactions and the
+        tric governance, Policy Stud. J., 39, 51–78, doi:10.1111/j.1541-coevolution of humans and water, Water Resour. Res., 51,
+        0072.2010.00396.x/full, 2011.WR017896,doi:10.1002/2015WR017896,2015.
+       McGinnis, M.: An Introduction to IAD and the LanguageSivapalan, M., Blöschl, G., Zhang, L., and Vertessy, R.: Downward
+        of the Ostrom Workshop: A Simple Guide to a Complexapproachtohydrologicalprediction, Hydrol. Process., 17, 2101–
+        Framework, Policy Stud. J., 39, 169–183, doi:10.1111/j.1541-2111, doi:10.1002/hyp.1425, 2003.
+        0072.2010.00401.x, 2011b.   Sivapalan, M., Savenije, H. H. G., and Blöschl, G.: Socio-
+       McGinnis, M. D. and Ostrom, E.: Social-ecological system frame-hydrology: A new science of people and water, Hydrol. Process.,
+        work: initial changes and continuing challenges, Ecol. Soc., 19,26, 1270–1276, 2012.
+        30, doi:10.5751/ES-06387-190230, 2014.SNWA–SouthernNevadaWaterAuthority:WaterResourcesMan-
+       Micklin, P.: The aral sea disaster, Annu. Rev. Earth Pl. Sc., 35, 47–agementPlan, available at: http://www.snwa.com/assets/pdf/wr_
+        72, doi:10.1146/annurev.earth.35.031306.140120, 2007.plan.pdf (last access: 1 July 2015), 2009.
+       Mini, C., Hogue, T. S., and Pincetl, S.: Patterns and controlling fac-Srinivasan, V., Gorelick, S. M., and Goulder, L.: Sustainable ur-
+        tors of residential water use in Los Angeles, California, WaterbanwatersupplyinsouthIndia:desalination,efﬁciencyimprove-
+        Policy, 16, 1–16, doi:10.2166/wp.2014.029, 2014.ment,orrainwaterharvesting?,WaterResour.Res.,46,W10504,
+       MWRA – Massachusetts Water Resources Authority: Summarydoi:10.1029/2009WR008698, 2010.
+        of MWRA Demand Management Program, available at: http://Srinivasan, V., Seto, K. C., Emerson, R., and Gorelick, S.
+        www.mwra.state.ma.us/harbor/pdf/demandreport03.pdf (last ac-M.:The impact of urbanization on water vulnerabil-
+        cess: 1 July 2015), 2003.    ity:A coupled human–environment system approach for
+       Olmstead, S. M. and Stavins, R. N.: Comparing price and nonpriceChennai,India,GlobalEnviron.Chang.,23,229–239,
+        approaches to urban water conservation, Water Resour. Res., 45,doi:10.1016/j.gloenvcha.2012.10.002, 2013.
+        W04301,doi:10.1029/2008WR007227, 2009.Srinivasan, V.: Reimagining the past – use of counterfactual tra-
+       Ostrom, E.: A diagnostic approach for going beyond panaceas, P.jectories in socio-hydrological modelling: the case of Chennai,
+        Natl. Acad. Sci. USA, 104, 15181–15187, 2007.India, Hydrol. Earth Syst. Sci., 19, 785–801, doi:10.5194/hess-
+       Ostrom, E.: A general framework for analyzing sustainabil-19-785-2015, 2015.
+        ityof social-ecological systems, Science, 325, 419–422,Stave, K. A.: A system dynamics model to facilitate public
+        doi:10.1126/science.1172133, 2009.understanding of water management options in Las Vegas,
+       Ostrom, E.: Background on the Institutional Analysis and Develop-Nevada, J. Environ. Manage., 67, 303–313, doi:10.1016/S0301-
+        ment Framework, Policy Stud. J., 39, 7–27, 2011.4797(02)00205-0, 2003.
+       Pahl-Wostl, C., Craps, M., Dewulf, A., Mostert, E., Tabara, D., andSterman, J.: Business Dynamics: Systems Thinking and Modeling
+        Taillieu, T.: Social Learning and Water Resources Management,for a Complex World, Irwin McGraw-Hill, Boston, 2000.
+        Ecol. Soc., 12, 5, 2007.    Thompson, S. E., Sivapalan, M., Harman, C. J., Srinivasan, V.,
+       Pahl-Wostl, C., Holtz, G., Kastens, B., and Knieper, C.: AnalyzingHipsey, M. R., Reed, P., Montanari, A., and Blöschl, G.: De-
+        complex water governance regimes: the Management and Tran-veloping predictive insight into changing water systems: use-
+        sition Framework, Environ. Sci. Policy, 13, 571–581, 2010.inspired hydrologic science for the Anthropocene, Hydrol.
+       Padowski, J. C. and Jawitz, J. W.: Water availability and vulnerabil-Earth Syst. Sci., 17, 5013–5039, doi:10.5194/hess-17-5013-
+        ity of 225 large cities in the United States, Water Resour Res, 48,2013, 2013.
+        W12529,doi:10.1029/2012WR012335, 2012.Tong, S. T. and Chen, W.: Modeling the relationship between land
+       Pande, S. and Ertsen, M.: Endogenous change: on cooperation anduse and surface water quality, J. Environ. Manage., 66, 377–393,
+        water availability in two ancient societies, Hydrol. Earth Syst.2002.
+        Sci., 18, 1745–1760, doi:10.5194/hess-18-1745-2014, 2014.Troy, T. J., Pavao-Zuckerman, M., and Evans, T. P.: Debates–
+       Schlager, E. and Heikkila, T.: Left High and Dry? ClimatePerspectives on socio-hydrology: Socio-hydrologic modeling:
+        Change, Common-Pool Resource Theory, and the AdaptabilityTradeoffs, hypothesis testing, and validation, Water Resour. Res.,
+        of Western Water Compacts, Public Admin. Rev., 71, 461–470,51, WR017046, doi:10.1002/2015WR017046, 2015.
+        doi:10.1111/j.1540-6210.2011.02367.x, 2011.Turral, H.: Hydro-Logic? Reform in Water Resources Management
+       Schlüter, M., Hinkel, J., Bots, P., and Arlinghaus, R.: Application ofin Developed Countries with Major Agricultural Water Use –
+        the SES framework for model-based analysis of the dynamics ofLessons for Developing Nations, Overseas Development Insti-
+        social–ecological systems, Ecol. Soc., 19, 36, doi:10.5751/ES-tute, London, 1998.
+        05782-190136, 2014.         Vahmani, P. and Hogue, T. S.: Incorporating an urban irrigation
+       Schuetze, T. and Santiago-Fandiño, V.: Quantitative assessment ofmodule into the Noah Land surface model coupled with an ur-
+        water use efﬁciency in urban and domestic buildings, Water, 5,ban canopy model, J. Hydrometeorol., 15, 1440–1456, 2014.
+        1172–1193, 2013.            van Emmerik, T. H. M., Li, Z., Sivapalan, M., Pande, S., Kan-
+       Shih, J. and Revelle, C.: Water-supply operations during drought:dasamy, J., Savenije, H. H. G., Chanan, A., and Vigneswaran,
+        continuous hedging rule, J. Water Res. Pl.-ASCE, 120, 613–629,S.: Socio-hydrologic modeling to understand and mediate the
+        1994.                        competition for water between agriculture development and en-
+       Sivapalan, M.: Debates–Perspectives on socio-hydrology: Chang-vironmental health: Murrumbidgee River basin, Australia, Hy-
+        ing water systems and the “tyranny of small problems”–drol. Earth Syst. Sci., 18, 4239–4259, doi:10.5194/hess-18-4239-
+        Socio-hydrology,WaterResour.Res.,51,WR017080,2014, 2014.
+        doi:10.1002/2015WR017080, 2015.
+       www.hydrol-earth-syst-sci.net/20/73/2016/Hydrol. Earth Syst. Sci., 20, 73–92, 2016
+       92                    M.Garciaetal.:Aquestiondrivensocio-hydrological modeling process
+       Viglione, A., Di Baldassarre, G., Brandimarte, L., Kuil, L., Carr,Wissmar,R.C.,Timm,R.K.,andLogsdon,M.G.:Effectsofchang-
+        G., Salinas, J. L., Scolobig, A., and Blöschl, G.: Insights froming forest and impervious land covers on discharge characteris-
+        socio-hydrology modelling on dealing with ﬂood risk – roles oftics of watersheds, Environ. Manage., 34, 91–98, 2004.
+        collective memory, risk-taking attitude and trust, J. Hydrol., 518,You, J. Y. and Cai, X.: Hedging rule for reservoir operations: 1. A
+        71–82, doi:10.1016/j.jhydrol.2014.01.018, 2014.theoretical analysis, Water Resour. Res., 44, 1–9, 2008.
+       Vörösmarty, C. J., McIntyre, P. B., Gessner, M. O., Dudgeon, D.,Young,P.,Parkinson,S.,andLees,M.:Simplicityoutofcomplexity
+        Prusevich,A.,Green,P.,Glidden,S.,Bunn,S.E.,Sullivan,C.A.,in environmental modelling: Occam’s razor revisited, J. Appl.
+        Lierman, C. R., and Davies, P. M.: Global threats to humanStat., 23, 165–210, doi:10.1080/02664769624206, 1996.
+        water security and river biodiversity, Nature, 467, 555–561,Young, P.: Top-down and data-based mechanistic modelling of
+        doi:10.1038/nature09549, 2010.rainfall–ﬂow dynamics at the catchment scale, Hydrol. Process.,
+       Wagener, T., Sivapalan, M., Troch, P. A., McGlynn, B. L., Har-17, 2195–2217, doi:10.1002/hyp.1328, 2003.
+        man, C. J., Gupta, H. V., and Wilson, J. S.: The future of hydrol-Zilberman, D., Dinar, A., MacDougall, N., Khanna, M., Brown,
+        ogy: an evolving science for a changing world, Water Resour.C., and Castillo, F.: Individual and institutional responses to the
+        Res, 46, W05301, doi:10.1029/2009WR008906, 2010.drought: The case of California agriculture. ERS Staff Paper, US
+       Wheater, H. S., Jakeman, A. J., and Beven, K. J.: Progress and di-Department of Agriculture, Washington, DC, 1992.
+        rections in rainfall–runoff modeling, in: Modeling Change in En-
+        vironmentalSystems,JohnWileyandSons,NewYork,101–132,
+        1993.
+       Willis, R. M., Stewart, R. A., Panuwatwanich, K., Williams, P. R.,
+        and Hollingsworth, A. L.: Quantifying the inﬂuence of environ-
+        mental and water conservation attitudes on household end use
+        water consumption, J. Environ. Manage., 92, 1996–2009, 2011.
+       Hydrol. Earth Syst. Sci., 20, 73–92, 2016www.hydrol-earth-syst-sci.net/20/73/2016/

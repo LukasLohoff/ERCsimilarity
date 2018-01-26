@@ -1,0 +1,28 @@
+{
+  "name": "explorer",
+  "version": "0.1.0",
+  "description": "exploring similar research publications",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "DEBUG=observer,executor node index.js"
+  },
+  "author": "Lukas Lohoff",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukasLohoff/explorer.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "debug": "^3.1.0",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.2",
+    "latlon-geohash": "^1.1.0",
+    "ngeohash": "^0.6.0",
+    "randomstring": "^1.1.5"
+  }
+}
