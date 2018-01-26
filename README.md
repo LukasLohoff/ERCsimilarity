@@ -41,9 +41,10 @@ After this make sure the path to your *geohash_generator* JAR matches the path i
 
 Note: The steps 0), 1) and 2) are optional and can be skipped by directly providing JSON files with the extracted *functions*, *dependencies*, *variable_names* and *geohashes*
 
+The two existing papers probably won't be enough to get similarity scores and visualize matrices. I recommend at least 10-20 papers.
+
 0) Get a set of research papers including source code and spatial data and prepare them in the same way as the papers in the `inputPapers` directory. 
 
-Note that the two existing papers probably won't be enough to get similarity scores and visualize matrices. I recommend at least 10-20 papers.
 
 1) The R script `extract_preprocess.R` can be used to convert Rmd files to R files and PDF files to txt files
 
