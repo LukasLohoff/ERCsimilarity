@@ -89,7 +89,7 @@ extractVariableNames = function(d) {
 
 extractGeohashes = function(d) {
   
-  jarCmd = "java -jar \"/home/lukas/github/explorer/geohash_generator/target/geohash-core-1.0-SNAPSHOT-jar-with-dependencies.jar\""
+  jarCmd = "java -jar \"../geohash_generator/target/geohash-core-1.0-SNAPSHOT-jar-with-dependencies.jar\""
   escp = paste("\"", d, "\"", sep="")
   cmd = paste(jarCmd, escp, sep = " ")
   
@@ -97,9 +97,6 @@ extractGeohashes = function(d) {
   geohash = fromJSON(readLines(command))
   close(command)
   return(geohash)
-  #test1 = readLines(pipe("java -jar /home/lukas/github/explorer/geohash_generator/target/geohash-core-1.0-SNAPSHOT-jar-with-dependencies.jar"))
-  #jsonTest = fromJSON(test1)
-  #test3 = c(jsonTest, jsonTest)
 }
 
 extractGeojson = function(d) {

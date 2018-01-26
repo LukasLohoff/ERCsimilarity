@@ -21,8 +21,6 @@ Exploration of research compendia
 
 Some commands (`gs` and `grep`  in the script `extract_all.R` and `functions_extr.R` may have to be adjusted if anything other than Ubuntu 16.04 is used.
 
-!TODO fix java command in functions_extr.R
-
 ### Installation
 
 Build:
@@ -35,7 +33,7 @@ Build:
 
 	mvn clean compile assembly:single
 		
-After this make sure the path to your *geohash_generator* JAR matches the path in the extraction script `extract_all.R` on line 
+**Important**: After this make sure the path to your *geohash_generator* JAR matches the path in the extraction functions `functions_extr.R` on line 92
 
 ### Usage
 
