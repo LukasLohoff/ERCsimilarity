@@ -16,7 +16,7 @@ library(plm)
 library(metafor)
 
 # set the working directory to the location of this file, e.g
-# setwd(paste(Sys.getenv("HOME"), "/github/explorer/R", sep=""))
+# setwd(paste(Sys.getenv("HOME"), "/github/ERCSimilarity/R", sep=""))
 
 # Load help functions for matrix cleanup and generation
 source("functions_extr.R")

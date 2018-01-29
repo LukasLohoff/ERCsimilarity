@@ -25,7 +25,7 @@ Some commands (`gs` and `grep`  in the script `extract_all.R` and `functions_ext
 
 Build:
 
-	cd ercsimilarity
+	cd ERCsimilarity
 
 	npm install
 
@@ -39,18 +39,20 @@ Build:
 
 Note: The steps 0), 1) and 2) are optional and can be skipped by directly providing JSON files with the extracted *functions*, *dependencies*, *variable_names* and *geohashes*
 
-The two existing papers probably won't be enough to get similarity scores and visualize matrices. I recommend at least 10-20 papers.
+The two existing papers probably won't be enough to get similarity scores and visualize matrices. Recommended are 10-20 papers.
 
 0) Get a set of research papers including source code and spatial data and prepare them in the same way as the papers in the `inputPapers` directory. 
 
 
-1) The R script `extract_preprocess.R` can be used to convert Rmd files to R files and PDF files to txt files
+1) The R script `extract_preprocess.R` can be used to convert Rmd files to R files and PDF files to txt files. For the two example ERCs in `inputPapers` this has already been done
 
-2) Extract code and spatial data by running the script `extract_all.R`.
+2) Delete the precomputed files in `outputDir` and then extract code and spatial data by running the script `extract_all.R`. This should create JSON files with dependencies, functions, variable names and geohashes.
 
 3) Start elasticsearch on port 9200 with the config from this repository:
 
  `bin/elasticsearch -Epath.conf=~/github/explorer/esconfig`
+ 
+3.5) Make sure no index with the name `explorer` exists
  
 4) Start the  explorer on port 8090: 
 
@@ -60,15 +62,22 @@ The two existing papers probably won't be enough to get similarity scores and vi
 
 `GET /api/v1/bulk?path=R/outputDir`
 
-6) Generate matrices by calling `/api/v1/matrix` and `/api/v1/matrix?type=spatial`
+6) Generate matrices by calling 
+
+`/api/v1/matrix` and `/api/v1/matrix?type=spatial`
 
 Get a list of similar papers by calling the `/api/v1/explore` endpoint:
 
-`GET http://localhost:8090/api/v1/explore/spacetime.json`
+`GET http://localhost:8090/api/v1/explore/hurricane.json`
+
+6.5) Explore the geohash representation by using the endpoit `/api/v1/visualize/ID`, e.g. 
+
+`http://localhost:8090/api/v1/visualize/hydrologicalModeling.json`
 
 7) To run the visualization, save the matrices into the `results` folder with the filenames specified in `R/generateVisualization.R`
 
 8) Run the R script `R/generateVisualization.R` to generate figures
+
 
 ### Useful commands
 

@@ -235,21 +235,6 @@ dev.off()
 
 # 3.1 matrix plots
 
-library(ggplot2)
-a <- M.IB.text
-sa <- stack(as.data.frame(a))
-sa$x <- rep(seq_len(nrow(a)), ncol(a))
-qplot(x, values, data = sa, group = ind, colour = ind, geom = "line")
-
-
-corrplot(cor((M.IB.code), (M.classic.code)))
-cor(c(M.IB.code), c(M.classic.code))
-
-cor(c)
-plot((M.DFR), (M.CLASSIC))
-cor(c(M.DFR.code), c(M.classic.code))
-
-
 # Comparing text, code and spatial similarity
 
 tempshortlist = c("text", "code", "spatial")
