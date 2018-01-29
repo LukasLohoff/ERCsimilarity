@@ -4,6 +4,7 @@ Exploration of research compendia
 
 ### Dependencies
 
+- Elasticsearch 6.1.1 on port 9200
 - R and the R packages:
 	- CodeDepends 0.5-5.1 (https://github.com/duncantl/CodeDepends) 
 	- knitR
